@@ -1,0 +1,99 @@
+harsh@harsh-HP-Notebook:/var/www/html$ ls -ltr
+total 24
+-rwxr-xr-x 1 harsh harsh 10918 Jun 12 10:12 index.html
+-rwxr-xr-x 1 harsh harsh    20 Jun 14 13:15 info.php
+drwxr-xr-x 2 harsh harsh  4096 Jun 14 13:34 localhost
+drwxr-xr-x 5 harsh harsh  4096 Jun 14 13:51 wordpress
+harsh@harsh-HP-Notebook:/var/www/html$ sudo chown -R www-data:www-data wordpress
+[sudo] password for harsh: 
+harsh@harsh-HP-Notebook:/var/www/html$ ls -ltr
+total 24
+-rwxr-xr-x 1 harsh    harsh    10918 Jun 12 10:12 index.html
+-rwxr-xr-x 1 harsh    harsh       20 Jun 14 13:15 info.php
+drwxr-xr-x 2 harsh    harsh     4096 Jun 14 13:34 localhost
+drwxr-xr-x 5 www-data www-data  4096 Jun 14 13:51 wordpress
+harsh@harsh-HP-Notebook:/var/www/html$ vim info.php   -----> only read
+harsh@harsh-HP-Notebook:/var/www/html$ cd /etc/apache2
+harsh@harsh-HP-Notebook:/etc/apache2$ cd sites-
+sites-available/ sites-enabled/   
+harsh@harsh-HP-Notebook:/etc/apache2$ cd sites-enabled/
+harsh@harsh-HP-Notebook:/etc/apache2/sites-enabled$ ls
+html.conf  localhost.conf  wordpress.conf
+harsh@harsh-HP-Notebook:/etc/apache2/sites-enabled$ cd ..
+harsh@harsh-HP-Notebook:/etc/apache2$ cd sites-available/
+harsh@harsh-HP-Notebook:/etc/apache2/sites-available$ ls
+000-default.conf  default-ssl.conf  html.conf  localhost.conf  wordpress.conf
+harsh@harsh-HP-Notebook:/etc/apache2/sites-available$ cd ..
+harsh@harsh-HP-Notebook:/etc/apache2$ cd sites-enabled/
+harsh@harsh-HP-Notebook:/etc/apache2/sites-enabled$ ls
+html.conf  localhost.conf  wordpress.conf
+harsh@harsh-HP-Notebook:/etc/apache2/sites-enabled$ sudo a2dissite 000-default.conf
+Site 000-default already disabled
+harsh@harsh-HP-Notebook:/etc/apache2/sites-enabled$ sudo a2dissite html.conf
+Site html disabled.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+harsh@harsh-HP-Notebook:/etc/apache2/sites-enabled$ sudo a2dissite localhost.conf
+Site localhost disabled.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+harsh@harsh-HP-Notebook:/etc/apache2/sites-enabled$ sudo a2dissite wordpress.conf
+Site wordpress disabled.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+harsh@harsh-HP-Notebook:/etc/apache2/sites-enabled$ sudo a2ensite 000-default.conf
+Enabling site 000-default.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+harsh@harsh-HP-Notebook:/etc/apache2/sites-enabled$ ls
+000-default.conf
+harsh@harsh-HP-Notebook:/etc/apache2/sites-enabled$ sudo vim 000-default.conf ---> add below documentroot(paranthesis part)-> (<Directory "/var/www">
+    AllowOverride All
+</Directory>
+<Directory "/var/www/html">
+    AllowOverride All
+</Directory>)
+
+
+harsh@harsh-HP-Notebook:/etc/apache2/sites-enabled$ sudo systemctl restart apache2
+harsh@harsh-HP-Notebook:/etc/apache2/sites-enabled$ sudo systemctl status apache2
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor prese>
+     Active: active (running) since Mon 2021-06-14 14:57:22 IST; 10s ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 27103 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/S>
+   Main PID: 27107 (apache2)
+      Tasks: 6 (limit: 4550)
+     Memory: 17.1M
+     CGroup: /system.slice/apache2.service
+             ├─27107 /usr/sbin/apache2 -k start
+             ├─27108 /usr/sbin/apache2 -k start
+             ├─27109 /usr/sbin/apache2 -k start
+             ├─27110 /usr/sbin/apache2 -k start
+             ├─27111 /usr/sbin/apache2 -k start
+             └─27112 /usr/sbin/apache2 -k start
+
+Jun 14 14:57:22 harsh-HP-Notebook systemd[1]: Starting The Apache HTTP Server...
+Jun 14 14:57:22 harsh-HP-Notebook apachectl[27106]: AH00558: apache2: Could not>
+Jun 14 14:57:22 harsh-HP-Notebook systemd[1]: Started The Apache HTTP Server.
+harsh@harsh-HP-Notebook:/etc/apache2/sites-enabled$ cd /var/www/html/wordpress/
+harsh@harsh-HP-Notebook:/var/www/html/wordpress$ vi wp-config.php
+harsh@harsh-HP-Notebook:/var/www/html/wordpress$ sudo vi wp-config.php
+harsh@harsh-HP-Notebook:/var/www/html/wordpress$ sudo vim 000-default.conf 
+[sudo] password for harsh: 
+harsh@harsh-HP-Notebook:/var/www/html/wordpress$ cd etc/apache2/sites-enabled
+bash: cd: etc/apache2/sites-enabled: No such file or directory
+harsh@harsh-HP-Notebook:/var/www/html/wordpress$ cd /etc/apache2/sites-enabled
+harsh@harsh-HP-Notebook:/etc/apache2/sites-enabled$ sudo vim 000-default.conf 
+harsh@harsh-HP-Notebook:/etc/apache2/sites-enabled$ 
+
+
+
+on localhost when installing themes or plugins asking for host name, ftp username and password
+solution -> Add define('FS_METHOD', 'direct');
+to /var/www/wordpress/wp-config.php
+
+Permission error- cannot create a directory -> 
+solution -> give permission using Chmod command for the /var/www/html/wordpress directory
+
+

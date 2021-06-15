@@ -1,0 +1,1502 @@
+harsh@harsh-HP-Notebook:~/bv_training$ ruby --version
+ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux-gnu]
+harsh@harsh-HP-Notebook:~/bv_training$ sudo apt purge yarn
+[sudo] password for harsh: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Note, selecting 'cmdtest' instead of 'yarn'
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+harsh@harsh-HP-Notebook:~/bv_training$ ls
+blog
+harsh@harsh-HP-Notebook:~/bv_training$ cd blog
+harsh@harsh-HP-Notebook:~/bv_training/blog$ ls
+app  bin  config  config.ru  db  Gemfile  Gemfile.lock  lib  log  package.json  public  Rakefile  README.md  storage  test  tmp  vendor
+harsh@harsh-HP-Notebook:~/bv_training/blog$ bundle install
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+Using rake 13.0.3
+Following files may not be writable, so sudo is needed:
+  /usr/local/bin
+  /var/lib/gems/2.7.0
+  /var/lib/gems/2.7.0/build_info
+  /var/lib/gems/2.7.0/cache
+  /var/lib/gems/2.7.0/doc
+  /var/lib/gems/2.7.0/extensions
+  /var/lib/gems/2.7.0/gems
+  /var/lib/gems/2.7.0/specifications
+Using concurrent-ruby 1.1.8
+Using i18n 1.8.10
+Using minitest 5.14.4
+Using tzinfo 2.0.4
+Using zeitwerk 2.4.2
+Using activesupport 6.1.3.2
+Using builder 3.2.4
+Using erubi 1.10.0
+Using mini_portile2 2.5.3
+Using racc 1.5.2
+Using nokogiri 1.11.7 (x86_64-linux)
+Using rails-dom-testing 2.0.3
+Using crass 1.0.6
+Using loofah 2.9.1
+Using rails-html-sanitizer 1.3.0
+Using actionview 6.1.3.2
+Using rack 2.2.3
+Using rack-test 1.1.0
+Using actionpack 6.1.3.2
+Using nio4r 2.5.7
+Using websocket-extensions 0.1.5
+Using websocket-driver 0.7.4
+Using actioncable 6.1.3.2
+Using globalid 0.4.2
+Using activejob 6.1.3.2
+Using activemodel 6.1.3.2
+Using activerecord 6.1.3.2
+Using marcel 1.0.1
+Using mini_mime 1.0.3
+Using activestorage 6.1.3.2
+Using mail 2.7.1
+Using actionmailbox 6.1.3.2
+Using actionmailer 6.1.3.2
+Using actiontext 6.1.3.2
+Using public_suffix 4.0.6
+Using addressable 2.7.0
+Using bindex 0.8.1
+Using msgpack 1.4.2
+Using bootsnap 1.7.5
+Using bundler 2.1.4
+Using byebug 11.1.3
+Using regexp_parser 2.1.1
+Using xpath 3.2.0
+Using capybara 3.35.3
+Using childprocess 3.0.0
+Using ffi 1.15.1
+Using jbuilder 2.11.2
+Using rb-fsevent 0.11.0
+Using rb-inotify 0.10.1
+Using listen 3.5.1
+Using method_source 1.0.0
+Using puma 5.3.2
+Using rack-mini-profiler 2.3.2
+Using rack-proxy 0.7.0
+Using thor 1.1.0
+Using railties 6.1.3.2
+Using sprockets 4.0.2
+Using sprockets-rails 3.2.2
+Using rails 6.1.3.2
+Using rubyzip 2.3.0
+Using sassc 2.4.0
+Using tilt 2.0.10
+Using sassc-rails 2.1.2
+Using sass-rails 6.0.0
+Using selenium-webdriver 3.142.7
+Using semantic_range 3.0.0
+Using spring 2.1.1
+Using sqlite3 1.4.2
+Using turbolinks-source 5.2.0
+Using turbolinks 5.2.1
+Using web-console 4.1.0
+Using webdrivers 4.6.0
+Using webpacker 5.4.0
+Bundle complete! 17 Gemfile dependencies, 74 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+harsh@harsh-HP-Notebook:~/bv_training/blog$ rm Gemfile.lock 
+harsh@harsh-HP-Notebook:~/bv_training/blog$ bundle install
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+Fetching gem metadata from https://rubygems.org/............
+Fetching gem metadata from https://rubygems.org/.
+Resolving dependencies....
+Using rake 13.0.3
+Following files may not be writable, so sudo is needed:
+  /usr/local/bin
+  /var/lib/gems/2.7.0
+  /var/lib/gems/2.7.0/build_info
+  /var/lib/gems/2.7.0/cache
+  /var/lib/gems/2.7.0/doc
+  /var/lib/gems/2.7.0/extensions
+  /var/lib/gems/2.7.0/gems
+  /var/lib/gems/2.7.0/specifications
+Using concurrent-ruby 1.1.8
+Using i18n 1.8.10
+Using minitest 5.14.4
+Using tzinfo 2.0.4
+Using zeitwerk 2.4.2
+Using activesupport 6.1.3.2
+Using builder 3.2.4
+Using erubi 1.10.0
+Using mini_portile2 2.5.3
+Using racc 1.5.2
+Using nokogiri 1.11.7 (x86_64-linux)
+Using rails-dom-testing 2.0.3
+Using crass 1.0.6
+Using loofah 2.9.1
+Using rails-html-sanitizer 1.3.0
+Using actionview 6.1.3.2
+Using rack 2.2.3
+Using rack-test 1.1.0
+Using actionpack 6.1.3.2
+Using nio4r 2.5.7
+Using websocket-extensions 0.1.5
+Using websocket-driver 0.7.4
+Using actioncable 6.1.3.2
+Using globalid 0.4.2
+Using activejob 6.1.3.2
+Using activemodel 6.1.3.2
+Using activerecord 6.1.3.2
+Using marcel 1.0.1
+Using mini_mime 1.0.3
+Using activestorage 6.1.3.2
+Using mail 2.7.1
+Using actionmailbox 6.1.3.2
+Using actionmailer 6.1.3.2
+Using actiontext 6.1.3.2
+Using public_suffix 4.0.6
+Using addressable 2.7.0
+Using bindex 0.8.1
+Using msgpack 1.4.2
+Using bootsnap 1.7.5
+Using bundler 2.1.4
+Using byebug 11.1.3
+Using regexp_parser 2.1.1
+Using xpath 3.2.0
+Using capybara 3.35.3
+Using childprocess 3.0.0
+Using ffi 1.15.1
+Using jbuilder 2.11.2
+Using rb-fsevent 0.11.0
+Using rb-inotify 0.10.1
+Using listen 3.5.1
+Using method_source 1.0.0
+Using puma 5.3.2
+Using rack-mini-profiler 2.3.2
+Using rack-proxy 0.7.0
+Using thor 1.1.0
+Using railties 6.1.3.2
+Using sprockets 4.0.2
+Using sprockets-rails 3.2.2
+Using rails 6.1.3.2
+Using rubyzip 2.3.0
+Using sassc 2.4.0
+Using tilt 2.0.10
+Using sassc-rails 2.1.2
+Using sass-rails 6.0.0
+Using selenium-webdriver 3.142.7
+Using semantic_range 3.0.0
+Using spring 2.1.1
+Using sqlite3 1.4.2
+Using turbolinks-source 5.2.0
+Using turbolinks 5.2.1
+Using web-console 4.1.0
+Using webdrivers 4.6.0
+Using webpacker 5.4.0
+Bundle complete! 17 Gemfile dependencies, 74 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+harsh@harsh-HP-Notebook:~/bv_training/blog$ rails s
+=> Booting Puma
+=> Rails 6.1.3.2 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Exiting
+Traceback (most recent call last):
+	76: from bin/rails:2:in `<main>'
+	75: from bin/rails:2:in `load'
+	74: from /home/harsh/bv_training/blog/bin/spring:7:in `<top (required)>'
+	73: from /home/harsh/bv_training/blog/bin/spring:7:in `tap'
+	72: from /home/harsh/bv_training/blog/bin/spring:10:in `block in <top (required)>'
+	71: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	70: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	69: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `<top (required)>'
+	68: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `load'
+	67: from /var/lib/gems/2.7.0/gems/spring-2.1.1/bin/spring:49:in `<top (required)>'
+	66: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client.rb:30:in `run'
+	65: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/command.rb:7:in `call'
+	64: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `call'
+	63: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `load'
+	62: from /home/harsh/bv_training/blog/bin/rails:5:in `<top (required)>'
+	61: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	60: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	59: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	58: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	57: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	56: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands.rb:18:in `<main>'
+	55: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command.rb:50:in `invoke'
+	54: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command/base.rb:69:in `perform'
+	53: from /usr/lib/ruby/vendor_ruby/thor.rb:369:in `dispatch'
+	52: from /usr/lib/ruby/vendor_ruby/thor/invocation.rb:126:in `invoke_command'
+	51: from /usr/lib/ruby/vendor_ruby/thor/command.rb:27:in `run'
+	50: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `perform'
+	49: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `tap'
+	48: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:144:in `block in perform'
+	47: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:37:in `start'
+	46: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:77:in `log_to_stdout'
+	45: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:422:in `wrapped_app'
+	44: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:249:in `app'
+	43: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:349:in `build_app_and_options_from_config'
+	42: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:66:in `parse_file'
+	41: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:105:in `load_file'
+	40: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `new_from_string'
+	39: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `eval'
+	38: from config.ru:3:in `block in <main>'
+	37: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:53:in `require_relative'
+	36: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+	35: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+	34: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+	33: from /var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+	32: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	31: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	30: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	29: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	28: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	27: from /home/harsh/bv_training/blog/config/environment.rb:5:in `<main>'
+	26: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/application.rb:384:in `initialize!'
+	25: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:60:in `run_initializers'
+	24: from /usr/lib/ruby/2.7.0/tsort.rb:205:in `tsort_each'
+	23: from /usr/lib/ruby/2.7.0/tsort.rb:226:in `tsort_each'
+	22: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each_strongly_connected_component'
+	21: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `call'
+	20: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each'
+	19: from /usr/lib/ruby/2.7.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	18: from /usr/lib/ruby/2.7.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	17: from /usr/lib/ruby/2.7.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	16: from /usr/lib/ruby/2.7.0/tsort.rb:228:in `block in tsort_each'
+	15: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:61:in `block in run_initializers'
+	14: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `run'
+	13: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `instance_exec'
+	12: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/railtie.rb:41:in `block in <class:Engine>'
+	11: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker.rb:35:in `bootstrap'
+	10: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/commands.rb:47:in `bootstrap'
+	 9: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:18:in `refresh'
+	 8: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:83:in `load'
+	 7: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:51:in `public_manifest_path'
+	 6: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:47:in `public_output_path'
+	 5: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:43:in `public_path'
+	 4: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:88:in `fetch'
+	 3: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:92:in `data'
+	 2: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:97:in `load'
+	 1: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/compile_cache/yaml.rb:113:in `load_file'
+/usr/lib/ruby/2.7.0/psych.rb:576:in `load_file': unknown keyword: :aliases (ArgumentError)
+	77: from bin/rails:2:in `<main>'
+	76: from bin/rails:2:in `load'
+	75: from /home/harsh/bv_training/blog/bin/spring:7:in `<top (required)>'
+	74: from /home/harsh/bv_training/blog/bin/spring:7:in `tap'
+	73: from /home/harsh/bv_training/blog/bin/spring:10:in `block in <top (required)>'
+	72: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	71: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	70: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `<top (required)>'
+	69: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `load'
+	68: from /var/lib/gems/2.7.0/gems/spring-2.1.1/bin/spring:49:in `<top (required)>'
+	67: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client.rb:30:in `run'
+	66: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/command.rb:7:in `call'
+	65: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `call'
+	64: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `load'
+	63: from /home/harsh/bv_training/blog/bin/rails:5:in `<top (required)>'
+	62: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	61: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	60: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	59: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	58: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	57: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands.rb:18:in `<main>'
+	56: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command.rb:50:in `invoke'
+	55: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command/base.rb:69:in `perform'
+	54: from /usr/lib/ruby/vendor_ruby/thor.rb:369:in `dispatch'
+	53: from /usr/lib/ruby/vendor_ruby/thor/invocation.rb:126:in `invoke_command'
+	52: from /usr/lib/ruby/vendor_ruby/thor/command.rb:27:in `run'
+	51: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `perform'
+	50: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `tap'
+	49: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:144:in `block in perform'
+	48: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:37:in `start'
+	47: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:77:in `log_to_stdout'
+	46: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:422:in `wrapped_app'
+	45: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:249:in `app'
+	44: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:349:in `build_app_and_options_from_config'
+	43: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:66:in `parse_file'
+	42: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:105:in `load_file'
+	41: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `new_from_string'
+	40: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `eval'
+	39: from config.ru:3:in `block in <main>'
+	38: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:53:in `require_relative'
+	37: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+	36: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+	35: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+	34: from /var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+	33: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	32: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	31: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	30: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	29: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	28: from /home/harsh/bv_training/blog/config/environment.rb:5:in `<main>'
+	27: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/application.rb:384:in `initialize!'
+	26: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:60:in `run_initializers'
+	25: from /usr/lib/ruby/2.7.0/tsort.rb:205:in `tsort_each'
+	24: from /usr/lib/ruby/2.7.0/tsort.rb:226:in `tsort_each'
+	23: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each_strongly_connected_component'
+	22: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `call'
+	21: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each'
+	20: from /usr/lib/ruby/2.7.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	19: from /usr/lib/ruby/2.7.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	18: from /usr/lib/ruby/2.7.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	17: from /usr/lib/ruby/2.7.0/tsort.rb:228:in `block in tsort_each'
+	16: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:61:in `block in run_initializers'
+	15: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `run'
+	14: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `instance_exec'
+	13: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/railtie.rb:41:in `block in <class:Engine>'
+	12: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker.rb:35:in `bootstrap'
+	11: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/commands.rb:47:in `bootstrap'
+	10: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:18:in `refresh'
+	 9: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:83:in `load'
+	 8: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:51:in `public_manifest_path'
+	 7: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:47:in `public_output_path'
+	 6: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:43:in `public_path'
+	 5: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:88:in `fetch'
+	 4: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:92:in `data'
+	 3: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:96:in `load'
+	 2: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:99:in `rescue in load'
+	 1: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/compile_cache/yaml.rb:119:in `load_file'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/compile_cache/yaml.rb:119:in `realpath': No such file or directory @ rb_check_realpath_internal - /home/harsh/bv_training/blog/config/webpacker.yml (Errno::ENOENT)
+	75: from bin/rails:2:in `<main>'
+	74: from bin/rails:2:in `load'
+	73: from /home/harsh/bv_training/blog/bin/spring:7:in `<top (required)>'
+	72: from /home/harsh/bv_training/blog/bin/spring:7:in `tap'
+	71: from /home/harsh/bv_training/blog/bin/spring:10:in `block in <top (required)>'
+	70: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	69: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	68: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `<top (required)>'
+	67: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `load'
+	66: from /var/lib/gems/2.7.0/gems/spring-2.1.1/bin/spring:49:in `<top (required)>'
+	65: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client.rb:30:in `run'
+	64: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/command.rb:7:in `call'
+	63: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `call'
+	62: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `load'
+	61: from /home/harsh/bv_training/blog/bin/rails:5:in `<top (required)>'
+	60: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	59: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	58: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	57: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	56: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	55: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands.rb:18:in `<main>'
+	54: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command.rb:50:in `invoke'
+	53: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command/base.rb:69:in `perform'
+	52: from /usr/lib/ruby/vendor_ruby/thor.rb:369:in `dispatch'
+	51: from /usr/lib/ruby/vendor_ruby/thor/invocation.rb:126:in `invoke_command'
+	50: from /usr/lib/ruby/vendor_ruby/thor/command.rb:27:in `run'
+	49: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `perform'
+	48: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `tap'
+	47: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:144:in `block in perform'
+	46: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:37:in `start'
+	45: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:77:in `log_to_stdout'
+	44: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:422:in `wrapped_app'
+	43: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:249:in `app'
+	42: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:349:in `build_app_and_options_from_config'
+	41: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:66:in `parse_file'
+	40: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:105:in `load_file'
+	39: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `new_from_string'
+	38: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `eval'
+	37: from config.ru:3:in `block in <main>'
+	36: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:53:in `require_relative'
+	35: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+	34: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+	33: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+	32: from /var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+	31: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	30: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	29: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	28: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	27: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	26: from /home/harsh/bv_training/blog/config/environment.rb:5:in `<main>'
+	25: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/application.rb:384:in `initialize!'
+	24: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:60:in `run_initializers'
+	23: from /usr/lib/ruby/2.7.0/tsort.rb:205:in `tsort_each'
+	22: from /usr/lib/ruby/2.7.0/tsort.rb:226:in `tsort_each'
+	21: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each_strongly_connected_component'
+	20: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `call'
+	19: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each'
+	18: from /usr/lib/ruby/2.7.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	17: from /usr/lib/ruby/2.7.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	16: from /usr/lib/ruby/2.7.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	15: from /usr/lib/ruby/2.7.0/tsort.rb:228:in `block in tsort_each'
+	14: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:61:in `block in run_initializers'
+	13: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `run'
+	12: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `instance_exec'
+	11: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/railtie.rb:41:in `block in <class:Engine>'
+	10: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker.rb:35:in `bootstrap'
+	 9: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/commands.rb:47:in `bootstrap'
+	 8: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:18:in `refresh'
+	 7: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:83:in `load'
+	 6: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:51:in `public_manifest_path'
+	 5: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:47:in `public_output_path'
+	 4: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:43:in `public_path'
+	 3: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:88:in `fetch'
+	 2: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:92:in `data'
+	 1: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:95:in `load'
+/var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:103:in `rescue in load': Webpacker configuration file not found /home/harsh/bv_training/blog/config/webpacker.yml. Please run rails webpacker:install Error: No such file or directory @ rb_check_realpath_internal - /home/harsh/bv_training/blog/config/webpacker.yml (RuntimeError)
+harsh@harsh-HP-Notebook:~/bv_training/blog$ rails webpacker:install
+rails aborted!
+TypeError: superclass mismatch for class Command
+/var/lib/gems/2.7.0/gems/thor-1.1.0/lib/thor/command.rb:2:in `<class:Thor>'
+/var/lib/gems/2.7.0/gems/thor-1.1.0/lib/thor/command.rb:1:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:53:in `require_relative'
+/var/lib/gems/2.7.0/gems/thor-1.1.0/lib/thor/base.rb:1:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:53:in `require_relative'
+/var/lib/gems/2.7.0/gems/thor-1.1.0/lib/thor/group.rb:1:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/generators.rb:6:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/app_updater.rb:3:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks/framework.rake:41:in `block (2 levels) in <main>'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks/framework.rake:40:in `block in <main>'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks/framework.rake:3:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:77:in `load'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:77:in `load'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:326:in `block in load'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:326:in `load'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks.rb:18:in `block in <main>'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks.rb:17:in `each'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks.rb:17:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:326:in `block in load'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:326:in `load'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/application.rb:522:in `run_tasks_blocks'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/engine.rb:464:in `load_tasks'
+/home/harsh/bv_training/blog/Rakefile:6:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/rake/rake_command.rb:20:in `block in perform'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/rake/rake_command.rb:18:in `perform'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command.rb:52:in `invoke'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands.rb:18:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/home/harsh/bv_training/blog/bin/rails:5:in `<top (required)>'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `load'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `call'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/command.rb:7:in `call'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client.rb:30:in `run'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/bin/spring:49:in `<top (required)>'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `load'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `<top (required)>'
+/home/harsh/bv_training/blog/bin/spring:10:in `block in <top (required)>'
+/home/harsh/bv_training/blog/bin/spring:7:in `tap'
+/home/harsh/bv_training/blog/bin/spring:7:in `<top (required)>'
+bin/rails:2:in `load'
+bin/rails:2:in `<main>'
+(See full trace by running task with --trace)
+harsh@harsh-HP-Notebook:~/bv_training/blog$ vi Gemfile
+harsh@harsh-HP-Notebook:~/bv_training/blog$ rails c
+Running via Spring preloader in process 22314
+Loading development environment (Rails 6.1.3.2)
+irb(main):001:0> 
+[1]+  Stopped                 rails c
+harsh@harsh-HP-Notebook:~/bv_training/blog$ npm uninstall -g yarn
+npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules/yarn
+npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules
+npm ERR! code EACCES
+npm ERR! syscall access
+npm ERR! path /usr/local/lib/node_modules/yarn
+npm ERR! errno -13
+npm ERR! Error: EACCES: permission denied, access '/usr/local/lib/node_modules/yarn'
+npm ERR!  { [Error: EACCES: permission denied, access '/usr/local/lib/node_modules/yarn']
+npm ERR!   stack:
+npm ERR!    'Error: EACCES: permission denied, access \'/usr/local/lib/node_modules/yarn\'',
+npm ERR!   errno: -13,
+npm ERR!   code: 'EACCES',
+npm ERR!   syscall: 'access',
+npm ERR!   path: '/usr/local/lib/node_modules/yarn' }
+npm ERR! 
+npm ERR! The operation was rejected by your operating system.
+npm ERR! It is likely you do not have the permissions to access this file as the current user
+npm ERR! 
+npm ERR! If you believe this might be a permissions issue, please double-check the
+npm ERR! permissions of the file and its containing directories, or try running
+npm ERR! the command again as root/Administrator.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/harsh/.npm/_logs/2021-06-04T06_34_48_085Z-debug.log
+harsh@harsh-HP-Notebook:~/bv_training/blog$ sudo npm uninstall -g yarn
+removed 1 package in 0.146s
+harsh@harsh-HP-Notebook:~/bv_training/blog$ sudo su
+root@harsh-HP-Notebook:/home/harsh/bv_training/blog# exit
+exit
+harsh@harsh-HP-Notebook:~/bv_training/blog$ sudo -l -U harsh
+Matching Defaults entries for harsh on harsh-HP-Notebook:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User harsh may run the following commands on harsh-HP-Notebook:
+    (ALL : ALL) ALL
+harsh@harsh-HP-Notebook:~/bv_training/blog$ groups
+harsh adm cdrom sudo dip plugdev lpadmin lxd sambashare
+harsh@harsh-HP-Notebook:~/bv_training/blog$ npm install --global yarn
+npm WARN checkPermissions Missing write access to /usr/local/lib
+npm ERR! code EACCES
+npm ERR! syscall access
+npm ERR! path /usr/local/lib
+npm ERR! errno -13
+npm ERR! Error: EACCES: permission denied, access '/usr/local/lib'
+npm ERR!  { [Error: EACCES: permission denied, access '/usr/local/lib']
+npm ERR!   stack:
+npm ERR!    'Error: EACCES: permission denied, access \'/usr/local/lib\'',
+npm ERR!   errno: -13,
+npm ERR!   code: 'EACCES',
+npm ERR!   syscall: 'access',
+npm ERR!   path: '/usr/local/lib' }
+npm ERR! 
+npm ERR! The operation was rejected by your operating system.
+npm ERR! It is likely you do not have the permissions to access this file as the current user
+npm ERR! 
+npm ERR! If you believe this might be a permissions issue, please double-check the
+npm ERR! permissions of the file and its containing directories, or try running
+npm ERR! the command again as root/Administrator.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/harsh/.npm/_logs/2021-06-04T06_37_02_061Z-debug.log
+harsh@harsh-HP-Notebook:~/bv_training/blog$ su - harsh
+Password: 
+harsh@harsh-HP-Notebook:~$ $USER
+
+Command 'harsh' not found, but can be installed with:
+
+sudo snap install harsh
+
+harsh@harsh-HP-Notebook:~$ cd /usr/local/
+harsh@harsh-HP-Notebook:/usr/local$ ls -lrt
+total 32
+drwxr-xr-x 2 root root 4096 Feb 10 00:17 src
+drwxr-xr-x 2 root root 4096 Feb 10 00:17 sbin
+drwxr-xr-x 2 root root 4096 Feb 10 00:17 include
+drwxr-xr-x 2 root root 4096 Feb 10 00:17 games
+drwxr-xr-x 2 root root 4096 Feb 10 00:17 etc
+drwxr-xr-x 7 root root 4096 Feb 10 00:21 share
+lrwxrwxrwx 1 root root    9 Jun  1 17:06 man -> share/man
+drwxr-xr-x 2 root root 4096 Jun  4 12:05 bin
+drwxr-xr-x 4 root root 4096 Jun  4 12:05 lib
+harsh@harsh-HP-Notebook:/usr/local$ cd /etc/
+harsh@harsh-HP-Notebook:/etc$ vi sudoers
+harsh@harsh-HP-Notebook:/etc$ sudo !!
+sudo vi sudoers
+harsh@harsh-HP-Notebook:/etc$ npm install --global yarn
+npm WARN checkPermissions Missing write access to /usr/local/lib
+npm ERR! code EACCES
+npm ERR! syscall access
+npm ERR! path /usr/local/lib
+npm ERR! errno -13
+npm ERR! Error: EACCES: permission denied, access '/usr/local/lib'
+npm ERR!  { [Error: EACCES: permission denied, access '/usr/local/lib']
+npm ERR!   stack:
+npm ERR!    'Error: EACCES: permission denied, access \'/usr/local/lib\'',
+npm ERR!   errno: -13,
+npm ERR!   code: 'EACCES',
+npm ERR!   syscall: 'access',
+npm ERR!   path: '/usr/local/lib' }
+npm ERR! 
+npm ERR! The operation was rejected by your operating system.
+npm ERR! It is likely you do not have the permissions to access this file as the current user
+npm ERR! 
+npm ERR! If you believe this might be a permissions issue, please double-check the
+npm ERR! permissions of the file and its containing directories, or try running
+npm ERR! the command again as root/Administrator.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/harsh/.npm/_logs/2021-06-04T06_43_15_636Z-debug.log
+harsh@harsh-HP-Notebook:/etc$ cd
+harsh@harsh-HP-Notebook:~$ pwd
+/home/harsh
+harsh@harsh-HP-Notebook:~$ usermod -aG sudo harsh
+usermod: Permission denied.
+usermod: cannot lock /etc/passwd; try again later.
+harsh@harsh-HP-Notebook:~$ sudo usermod -aG sudo harsh
+harsh@harsh-HP-Notebook:~$ su -harsh
+
+Usage:
+ su [options] [-] [<user> [<argument>...]]
+
+Change the effective user ID and group ID to that of <user>.
+A mere - implies -l.  If <user> is not given, root is assumed.
+
+Options:
+ -m, -p, --preserve-environment      do not reset environment variables
+ -w, --whitelist-environment <list>  don't reset specified variables
+
+ -g, --group <group>             specify the primary group
+ -G, --supp-group <group>        specify a supplemental group
+
+ -, -l, --login                  make the shell a login shell
+ -c, --command <command>         pass a single command to the shell with -c
+ --session-command <command>     pass a single command to the shell with -c
+                                   and do not create a new session
+ -f, --fast                      pass -f to the shell (for csh or tcsh)
+ -s, --shell <shell>             run <shell> if /etc/shells allows it
+ -P, --pty                       create a new pseudo-terminal
+
+ -h, --help                      display this help
+ -V, --version                   display version
+
+For more details see su(1).
+harsh@harsh-HP-Notebook:~$ su - harsh
+Password: 
+harsh@harsh-HP-Notebook:~$ grep '^sudo' /etc/group
+sudo:x:27:harsh
+harsh@harsh-HP-Notebook:~$ npm install --global yarn
+npm WARN checkPermissions Missing write access to /usr/local/lib
+npm ERR! code EACCES
+npm ERR! syscall access
+npm ERR! path /usr/local/lib
+npm ERR! errno -13
+npm ERR! Error: EACCES: permission denied, access '/usr/local/lib'
+npm ERR!  { [Error: EACCES: permission denied, access '/usr/local/lib']
+npm ERR!   stack:
+npm ERR!    'Error: EACCES: permission denied, access \'/usr/local/lib\'',
+npm ERR!   errno: -13,
+npm ERR!   code: 'EACCES',
+npm ERR!   syscall: 'access',
+npm ERR!   path: '/usr/local/lib' }
+npm ERR! 
+npm ERR! The operation was rejected by your operating system.
+npm ERR! It is likely you do not have the permissions to access this file as the current user
+npm ERR! 
+npm ERR! If you believe this might be a permissions issue, please double-check the
+npm ERR! permissions of the file and its containing directories, or try running
+npm ERR! the command again as root/Administrator.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/harsh/.npm/_logs/2021-06-04T06_46_24_755Z-debug.log
+harsh@harsh-HP-Notebook:~$ sudo npm install --global yarn
+
+> yarn@1.22.10 preinstall /usr/local/lib/node_modules/yarn
+> :; (node ./preinstall.js > /dev/null 2>&1 || true)
+
+/usr/local/bin/yarnpkg -> /usr/local/lib/node_modules/yarn/bin/yarn.js
+/usr/local/bin/yarn -> /usr/local/lib/node_modules/yarn/bin/yarn.js
++ yarn@1.22.10
+added 1 package in 3.216s
+harsh@harsh-HP-Notebook:~$ cd bv_training/blog
+harsh@harsh-HP-Notebook:~/bv_training/blog$ rails -s
+rails aborted!
+TypeError: superclass mismatch for class Command
+/var/lib/gems/2.7.0/gems/thor-1.1.0/lib/thor/command.rb:2:in `<class:Thor>'
+/var/lib/gems/2.7.0/gems/thor-1.1.0/lib/thor/command.rb:1:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:53:in `require_relative'
+/var/lib/gems/2.7.0/gems/thor-1.1.0/lib/thor/base.rb:1:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:53:in `require_relative'
+/var/lib/gems/2.7.0/gems/thor-1.1.0/lib/thor/group.rb:1:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/generators.rb:6:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/app_updater.rb:3:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks/framework.rake:41:in `block (2 levels) in <main>'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks/framework.rake:40:in `block in <main>'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks/framework.rake:3:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:77:in `load'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:77:in `load'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:326:in `block in load'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:326:in `load'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks.rb:18:in `block in <main>'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks.rb:17:in `each'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks.rb:17:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:326:in `block in load'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:326:in `load'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/application.rb:522:in `run_tasks_blocks'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/engine.rb:464:in `load_tasks'
+/home/harsh/bv_training/blog/Rakefile:6:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/rake/rake_command.rb:20:in `block in perform'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/rake/rake_command.rb:18:in `perform'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command.rb:52:in `invoke'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands.rb:18:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/home/harsh/bv_training/blog/bin/rails:5:in `<top (required)>'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `load'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `call'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/command.rb:7:in `call'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client.rb:30:in `run'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/bin/spring:49:in `<top (required)>'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `load'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `<top (required)>'
+/home/harsh/bv_training/blog/bin/spring:10:in `block in <top (required)>'
+/home/harsh/bv_training/blog/bin/spring:7:in `tap'
+/home/harsh/bv_training/blog/bin/spring:7:in `<top (required)>'
+bin/rails:2:in `load'
+bin/rails:2:in `<main>'
+(See full trace by running task with --trace)
+harsh@harsh-HP-Notebook:~/bv_training/blog$ rails s
+=> Booting Puma
+=> Rails 6.1.3.2 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Exiting
+Traceback (most recent call last):
+	76: from bin/rails:2:in `<main>'
+	75: from bin/rails:2:in `load'
+	74: from /home/harsh/bv_training/blog/bin/spring:7:in `<top (required)>'
+	73: from /home/harsh/bv_training/blog/bin/spring:7:in `tap'
+	72: from /home/harsh/bv_training/blog/bin/spring:10:in `block in <top (required)>'
+	71: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	70: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	69: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `<top (required)>'
+	68: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `load'
+	67: from /var/lib/gems/2.7.0/gems/spring-2.1.1/bin/spring:49:in `<top (required)>'
+	66: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client.rb:30:in `run'
+	65: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/command.rb:7:in `call'
+	64: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `call'
+	63: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `load'
+	62: from /home/harsh/bv_training/blog/bin/rails:5:in `<top (required)>'
+	61: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	60: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	59: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	58: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	57: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	56: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands.rb:18:in `<main>'
+	55: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command.rb:50:in `invoke'
+	54: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command/base.rb:69:in `perform'
+	53: from /usr/lib/ruby/vendor_ruby/thor.rb:369:in `dispatch'
+	52: from /usr/lib/ruby/vendor_ruby/thor/invocation.rb:126:in `invoke_command'
+	51: from /usr/lib/ruby/vendor_ruby/thor/command.rb:27:in `run'
+	50: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `perform'
+	49: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `tap'
+	48: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:144:in `block in perform'
+	47: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:37:in `start'
+	46: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:77:in `log_to_stdout'
+	45: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:422:in `wrapped_app'
+	44: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:249:in `app'
+	43: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:349:in `build_app_and_options_from_config'
+	42: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:66:in `parse_file'
+	41: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:105:in `load_file'
+	40: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `new_from_string'
+	39: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `eval'
+	38: from config.ru:3:in `block in <main>'
+	37: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:53:in `require_relative'
+	36: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+	35: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+	34: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+	33: from /var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+	32: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	31: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	30: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	29: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	28: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	27: from /home/harsh/bv_training/blog/config/environment.rb:5:in `<main>'
+	26: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/application.rb:384:in `initialize!'
+	25: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:60:in `run_initializers'
+	24: from /usr/lib/ruby/2.7.0/tsort.rb:205:in `tsort_each'
+	23: from /usr/lib/ruby/2.7.0/tsort.rb:226:in `tsort_each'
+	22: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each_strongly_connected_component'
+	21: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `call'
+	20: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each'
+	19: from /usr/lib/ruby/2.7.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	18: from /usr/lib/ruby/2.7.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	17: from /usr/lib/ruby/2.7.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	16: from /usr/lib/ruby/2.7.0/tsort.rb:228:in `block in tsort_each'
+	15: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:61:in `block in run_initializers'
+	14: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `run'
+	13: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `instance_exec'
+	12: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/railtie.rb:41:in `block in <class:Engine>'
+	11: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker.rb:35:in `bootstrap'
+	10: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/commands.rb:47:in `bootstrap'
+	 9: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:18:in `refresh'
+	 8: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:83:in `load'
+	 7: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:51:in `public_manifest_path'
+	 6: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:47:in `public_output_path'
+	 5: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:43:in `public_path'
+	 4: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:88:in `fetch'
+	 3: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:92:in `data'
+	 2: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:97:in `load'
+	 1: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/compile_cache/yaml.rb:113:in `load_file'
+/usr/lib/ruby/2.7.0/psych.rb:576:in `load_file': unknown keyword: :aliases (ArgumentError)
+	77: from bin/rails:2:in `<main>'
+	76: from bin/rails:2:in `load'
+	75: from /home/harsh/bv_training/blog/bin/spring:7:in `<top (required)>'
+	74: from /home/harsh/bv_training/blog/bin/spring:7:in `tap'
+	73: from /home/harsh/bv_training/blog/bin/spring:10:in `block in <top (required)>'
+	72: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	71: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	70: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `<top (required)>'
+	69: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `load'
+	68: from /var/lib/gems/2.7.0/gems/spring-2.1.1/bin/spring:49:in `<top (required)>'
+	67: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client.rb:30:in `run'
+	66: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/command.rb:7:in `call'
+	65: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `call'
+	64: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `load'
+	63: from /home/harsh/bv_training/blog/bin/rails:5:in `<top (required)>'
+	62: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	61: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	60: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	59: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	58: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	57: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands.rb:18:in `<main>'
+	56: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command.rb:50:in `invoke'
+	55: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command/base.rb:69:in `perform'
+	54: from /usr/lib/ruby/vendor_ruby/thor.rb:369:in `dispatch'
+	53: from /usr/lib/ruby/vendor_ruby/thor/invocation.rb:126:in `invoke_command'
+	52: from /usr/lib/ruby/vendor_ruby/thor/command.rb:27:in `run'
+	51: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `perform'
+	50: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `tap'
+	49: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:144:in `block in perform'
+	48: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:37:in `start'
+	47: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:77:in `log_to_stdout'
+	46: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:422:in `wrapped_app'
+	45: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:249:in `app'
+	44: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:349:in `build_app_and_options_from_config'
+	43: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:66:in `parse_file'
+	42: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:105:in `load_file'
+	41: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `new_from_string'
+	40: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `eval'
+	39: from config.ru:3:in `block in <main>'
+	38: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:53:in `require_relative'
+	37: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+	36: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+	35: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+	34: from /var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+	33: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	32: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	31: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	30: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	29: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	28: from /home/harsh/bv_training/blog/config/environment.rb:5:in `<main>'
+	27: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/application.rb:384:in `initialize!'
+	26: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:60:in `run_initializers'
+	25: from /usr/lib/ruby/2.7.0/tsort.rb:205:in `tsort_each'
+	24: from /usr/lib/ruby/2.7.0/tsort.rb:226:in `tsort_each'
+	23: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each_strongly_connected_component'
+	22: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `call'
+	21: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each'
+	20: from /usr/lib/ruby/2.7.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	19: from /usr/lib/ruby/2.7.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	18: from /usr/lib/ruby/2.7.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	17: from /usr/lib/ruby/2.7.0/tsort.rb:228:in `block in tsort_each'
+	16: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:61:in `block in run_initializers'
+	15: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `run'
+	14: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `instance_exec'
+	13: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/railtie.rb:41:in `block in <class:Engine>'
+	12: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker.rb:35:in `bootstrap'
+	11: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/commands.rb:47:in `bootstrap'
+	10: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:18:in `refresh'
+	 9: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:83:in `load'
+	 8: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:51:in `public_manifest_path'
+	 7: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:47:in `public_output_path'
+	 6: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:43:in `public_path'
+	 5: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:88:in `fetch'
+	 4: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:92:in `data'
+	 3: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:96:in `load'
+	 2: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:99:in `rescue in load'
+	 1: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/compile_cache/yaml.rb:119:in `load_file'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/compile_cache/yaml.rb:119:in `realpath': No such file or directory @ rb_check_realpath_internal - /home/harsh/bv_training/blog/config/webpacker.yml (Errno::ENOENT)
+	75: from bin/rails:2:in `<main>'
+	74: from bin/rails:2:in `load'
+	73: from /home/harsh/bv_training/blog/bin/spring:7:in `<top (required)>'
+	72: from /home/harsh/bv_training/blog/bin/spring:7:in `tap'
+	71: from /home/harsh/bv_training/blog/bin/spring:10:in `block in <top (required)>'
+	70: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	69: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	68: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `<top (required)>'
+	67: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `load'
+	66: from /var/lib/gems/2.7.0/gems/spring-2.1.1/bin/spring:49:in `<top (required)>'
+	65: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client.rb:30:in `run'
+	64: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/command.rb:7:in `call'
+	63: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `call'
+	62: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `load'
+	61: from /home/harsh/bv_training/blog/bin/rails:5:in `<top (required)>'
+	60: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	59: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	58: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	57: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	56: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	55: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands.rb:18:in `<main>'
+	54: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command.rb:50:in `invoke'
+	53: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command/base.rb:69:in `perform'
+	52: from /usr/lib/ruby/vendor_ruby/thor.rb:369:in `dispatch'
+	51: from /usr/lib/ruby/vendor_ruby/thor/invocation.rb:126:in `invoke_command'
+	50: from /usr/lib/ruby/vendor_ruby/thor/command.rb:27:in `run'
+	49: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `perform'
+	48: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `tap'
+	47: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:144:in `block in perform'
+	46: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:37:in `start'
+	45: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:77:in `log_to_stdout'
+	44: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:422:in `wrapped_app'
+	43: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:249:in `app'
+	42: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:349:in `build_app_and_options_from_config'
+	41: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:66:in `parse_file'
+	40: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:105:in `load_file'
+	39: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `new_from_string'
+	38: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `eval'
+	37: from config.ru:3:in `block in <main>'
+	36: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:53:in `require_relative'
+	35: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+	34: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+	33: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+	32: from /var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+	31: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	30: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	29: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	28: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	27: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	26: from /home/harsh/bv_training/blog/config/environment.rb:5:in `<main>'
+	25: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/application.rb:384:in `initialize!'
+	24: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:60:in `run_initializers'
+	23: from /usr/lib/ruby/2.7.0/tsort.rb:205:in `tsort_each'
+	22: from /usr/lib/ruby/2.7.0/tsort.rb:226:in `tsort_each'
+	21: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each_strongly_connected_component'
+	20: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `call'
+	19: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each'
+	18: from /usr/lib/ruby/2.7.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	17: from /usr/lib/ruby/2.7.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	16: from /usr/lib/ruby/2.7.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	15: from /usr/lib/ruby/2.7.0/tsort.rb:228:in `block in tsort_each'
+	14: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:61:in `block in run_initializers'
+	13: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `run'
+	12: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `instance_exec'
+	11: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/railtie.rb:41:in `block in <class:Engine>'
+	10: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker.rb:35:in `bootstrap'
+	 9: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/commands.rb:47:in `bootstrap'
+	 8: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:18:in `refresh'
+	 7: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:83:in `load'
+	 6: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:51:in `public_manifest_path'
+	 5: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:47:in `public_output_path'
+	 4: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:43:in `public_path'
+	 3: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:88:in `fetch'
+	 2: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:92:in `data'
+	 1: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:95:in `load'
+/var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:103:in `rescue in load': Webpacker configuration file not found /home/harsh/bv_training/blog/config/webpacker.yml. Please run rails webpacker:install Error: No such file or directory @ rb_check_realpath_internal - /home/harsh/bv_training/blog/config/webpacker.yml (RuntimeError)
+harsh@harsh-HP-Notebook:~/bv_training/blog$ yarn install --check-files
+yarn install v1.22.10
+info No lockfile found.
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+Done in 13.55s.
+harsh@harsh-HP-Notebook:~/bv_training/blog$ rails s
+=> Booting Puma
+=> Rails 6.1.3.2 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Exiting
+Traceback (most recent call last):
+	76: from bin/rails:2:in `<main>'
+	75: from bin/rails:2:in `load'
+	74: from /home/harsh/bv_training/blog/bin/spring:7:in `<top (required)>'
+	73: from /home/harsh/bv_training/blog/bin/spring:7:in `tap'
+	72: from /home/harsh/bv_training/blog/bin/spring:10:in `block in <top (required)>'
+	71: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	70: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	69: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `<top (required)>'
+	68: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `load'
+	67: from /var/lib/gems/2.7.0/gems/spring-2.1.1/bin/spring:49:in `<top (required)>'
+	66: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client.rb:30:in `run'
+	65: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/command.rb:7:in `call'
+	64: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `call'
+	63: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `load'
+	62: from /home/harsh/bv_training/blog/bin/rails:5:in `<top (required)>'
+	61: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	60: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	59: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	58: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	57: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	56: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands.rb:18:in `<main>'
+	55: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command.rb:50:in `invoke'
+	54: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command/base.rb:69:in `perform'
+	53: from /usr/lib/ruby/vendor_ruby/thor.rb:369:in `dispatch'
+	52: from /usr/lib/ruby/vendor_ruby/thor/invocation.rb:126:in `invoke_command'
+	51: from /usr/lib/ruby/vendor_ruby/thor/command.rb:27:in `run'
+	50: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `perform'
+	49: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `tap'
+	48: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:144:in `block in perform'
+	47: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:37:in `start'
+	46: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:77:in `log_to_stdout'
+	45: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:422:in `wrapped_app'
+	44: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:249:in `app'
+	43: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:349:in `build_app_and_options_from_config'
+	42: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:66:in `parse_file'
+	41: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:105:in `load_file'
+	40: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `new_from_string'
+	39: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `eval'
+	38: from config.ru:3:in `block in <main>'
+	37: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:53:in `require_relative'
+	36: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+	35: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+	34: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+	33: from /var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+	32: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	31: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	30: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	29: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	28: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	27: from /home/harsh/bv_training/blog/config/environment.rb:5:in `<main>'
+	26: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/application.rb:384:in `initialize!'
+	25: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:60:in `run_initializers'
+	24: from /usr/lib/ruby/2.7.0/tsort.rb:205:in `tsort_each'
+	23: from /usr/lib/ruby/2.7.0/tsort.rb:226:in `tsort_each'
+	22: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each_strongly_connected_component'
+	21: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `call'
+	20: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each'
+	19: from /usr/lib/ruby/2.7.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	18: from /usr/lib/ruby/2.7.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	17: from /usr/lib/ruby/2.7.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	16: from /usr/lib/ruby/2.7.0/tsort.rb:228:in `block in tsort_each'
+	15: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:61:in `block in run_initializers'
+	14: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `run'
+	13: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `instance_exec'
+	12: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/railtie.rb:41:in `block in <class:Engine>'
+	11: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker.rb:35:in `bootstrap'
+	10: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/commands.rb:47:in `bootstrap'
+	 9: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:18:in `refresh'
+	 8: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:83:in `load'
+	 7: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:51:in `public_manifest_path'
+	 6: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:47:in `public_output_path'
+	 5: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:43:in `public_path'
+	 4: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:88:in `fetch'
+	 3: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:92:in `data'
+	 2: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:97:in `load'
+	 1: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/compile_cache/yaml.rb:113:in `load_file'
+/usr/lib/ruby/2.7.0/psych.rb:576:in `load_file': unknown keyword: :aliases (ArgumentError)
+	77: from bin/rails:2:in `<main>'
+	76: from bin/rails:2:in `load'
+	75: from /home/harsh/bv_training/blog/bin/spring:7:in `<top (required)>'
+	74: from /home/harsh/bv_training/blog/bin/spring:7:in `tap'
+	73: from /home/harsh/bv_training/blog/bin/spring:10:in `block in <top (required)>'
+	72: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	71: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	70: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `<top (required)>'
+	69: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `load'
+	68: from /var/lib/gems/2.7.0/gems/spring-2.1.1/bin/spring:49:in `<top (required)>'
+	67: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client.rb:30:in `run'
+	66: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/command.rb:7:in `call'
+	65: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `call'
+	64: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `load'
+	63: from /home/harsh/bv_training/blog/bin/rails:5:in `<top (required)>'
+	62: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	61: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	60: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	59: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	58: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	57: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands.rb:18:in `<main>'
+	56: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command.rb:50:in `invoke'
+	55: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command/base.rb:69:in `perform'
+	54: from /usr/lib/ruby/vendor_ruby/thor.rb:369:in `dispatch'
+	53: from /usr/lib/ruby/vendor_ruby/thor/invocation.rb:126:in `invoke_command'
+	52: from /usr/lib/ruby/vendor_ruby/thor/command.rb:27:in `run'
+	51: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `perform'
+	50: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `tap'
+	49: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:144:in `block in perform'
+	48: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:37:in `start'
+	47: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:77:in `log_to_stdout'
+	46: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:422:in `wrapped_app'
+	45: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:249:in `app'
+	44: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:349:in `build_app_and_options_from_config'
+	43: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:66:in `parse_file'
+	42: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:105:in `load_file'
+	41: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `new_from_string'
+	40: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `eval'
+	39: from config.ru:3:in `block in <main>'
+	38: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:53:in `require_relative'
+	37: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+	36: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+	35: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+	34: from /var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+	33: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	32: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	31: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	30: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	29: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	28: from /home/harsh/bv_training/blog/config/environment.rb:5:in `<main>'
+	27: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/application.rb:384:in `initialize!'
+	26: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:60:in `run_initializers'
+	25: from /usr/lib/ruby/2.7.0/tsort.rb:205:in `tsort_each'
+	24: from /usr/lib/ruby/2.7.0/tsort.rb:226:in `tsort_each'
+	23: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each_strongly_connected_component'
+	22: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `call'
+	21: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each'
+	20: from /usr/lib/ruby/2.7.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	19: from /usr/lib/ruby/2.7.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	18: from /usr/lib/ruby/2.7.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	17: from /usr/lib/ruby/2.7.0/tsort.rb:228:in `block in tsort_each'
+	16: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:61:in `block in run_initializers'
+	15: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `run'
+	14: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `instance_exec'
+	13: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/railtie.rb:41:in `block in <class:Engine>'
+	12: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker.rb:35:in `bootstrap'
+	11: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/commands.rb:47:in `bootstrap'
+	10: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:18:in `refresh'
+	 9: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:83:in `load'
+	 8: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:51:in `public_manifest_path'
+	 7: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:47:in `public_output_path'
+	 6: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:43:in `public_path'
+	 5: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:88:in `fetch'
+	 4: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:92:in `data'
+	 3: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:96:in `load'
+	 2: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:99:in `rescue in load'
+	 1: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/compile_cache/yaml.rb:119:in `load_file'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/compile_cache/yaml.rb:119:in `realpath': No such file or directory @ rb_check_realpath_internal - /home/harsh/bv_training/blog/config/webpacker.yml (Errno::ENOENT)
+	75: from bin/rails:2:in `<main>'
+	74: from bin/rails:2:in `load'
+	73: from /home/harsh/bv_training/blog/bin/spring:7:in `<top (required)>'
+	72: from /home/harsh/bv_training/blog/bin/spring:7:in `tap'
+	71: from /home/harsh/bv_training/blog/bin/spring:10:in `block in <top (required)>'
+	70: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	69: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	68: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `<top (required)>'
+	67: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `load'
+	66: from /var/lib/gems/2.7.0/gems/spring-2.1.1/bin/spring:49:in `<top (required)>'
+	65: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client.rb:30:in `run'
+	64: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/command.rb:7:in `call'
+	63: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `call'
+	62: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `load'
+	61: from /home/harsh/bv_training/blog/bin/rails:5:in `<top (required)>'
+	60: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	59: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	58: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	57: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	56: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	55: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands.rb:18:in `<main>'
+	54: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command.rb:50:in `invoke'
+	53: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command/base.rb:69:in `perform'
+	52: from /usr/lib/ruby/vendor_ruby/thor.rb:369:in `dispatch'
+	51: from /usr/lib/ruby/vendor_ruby/thor/invocation.rb:126:in `invoke_command'
+	50: from /usr/lib/ruby/vendor_ruby/thor/command.rb:27:in `run'
+	49: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `perform'
+	48: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `tap'
+	47: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:144:in `block in perform'
+	46: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:37:in `start'
+	45: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:77:in `log_to_stdout'
+	44: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:422:in `wrapped_app'
+	43: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:249:in `app'
+	42: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:349:in `build_app_and_options_from_config'
+	41: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:66:in `parse_file'
+	40: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:105:in `load_file'
+	39: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `new_from_string'
+	38: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `eval'
+	37: from config.ru:3:in `block in <main>'
+	36: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:53:in `require_relative'
+	35: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+	34: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+	33: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+	32: from /var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+	31: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	30: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	29: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	28: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	27: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	26: from /home/harsh/bv_training/blog/config/environment.rb:5:in `<main>'
+	25: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/application.rb:384:in `initialize!'
+	24: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:60:in `run_initializers'
+	23: from /usr/lib/ruby/2.7.0/tsort.rb:205:in `tsort_each'
+	22: from /usr/lib/ruby/2.7.0/tsort.rb:226:in `tsort_each'
+	21: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each_strongly_connected_component'
+	20: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `call'
+	19: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each'
+	18: from /usr/lib/ruby/2.7.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	17: from /usr/lib/ruby/2.7.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	16: from /usr/lib/ruby/2.7.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	15: from /usr/lib/ruby/2.7.0/tsort.rb:228:in `block in tsort_each'
+	14: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:61:in `block in run_initializers'
+	13: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `run'
+	12: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `instance_exec'
+	11: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/railtie.rb:41:in `block in <class:Engine>'
+	10: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker.rb:35:in `bootstrap'
+	 9: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/commands.rb:47:in `bootstrap'
+	 8: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:18:in `refresh'
+	 7: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:83:in `load'
+	 6: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:51:in `public_manifest_path'
+	 5: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:47:in `public_output_path'
+	 4: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:43:in `public_path'
+	 3: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:88:in `fetch'
+	 2: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:92:in `data'
+	 1: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:95:in `load'
+/var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:103:in `rescue in load': Webpacker configuration file not found /home/harsh/bv_training/blog/config/webpacker.yml. Please run rails webpacker:install Error: No such file or directory @ rb_check_realpath_internal - /home/harsh/bv_training/blog/config/webpacker.yml (RuntimeError)
+harsh@harsh-HP-Notebook:~/bv_training/blog$ rails webpacker:install
+rails aborted!
+TypeError: superclass mismatch for class Command
+/var/lib/gems/2.7.0/gems/thor-1.1.0/lib/thor/command.rb:2:in `<class:Thor>'
+/var/lib/gems/2.7.0/gems/thor-1.1.0/lib/thor/command.rb:1:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:53:in `require_relative'
+/var/lib/gems/2.7.0/gems/thor-1.1.0/lib/thor/base.rb:1:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:53:in `require_relative'
+/var/lib/gems/2.7.0/gems/thor-1.1.0/lib/thor/group.rb:1:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/generators.rb:6:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/app_updater.rb:3:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks/framework.rake:41:in `block (2 levels) in <main>'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks/framework.rake:40:in `block in <main>'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks/framework.rake:3:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:77:in `load'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:77:in `load'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:326:in `block in load'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:326:in `load'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks.rb:18:in `block in <main>'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks.rb:17:in `each'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/tasks.rb:17:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:326:in `block in load'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+/var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:326:in `load'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/application.rb:522:in `run_tasks_blocks'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/engine.rb:464:in `load_tasks'
+/home/harsh/bv_training/blog/Rakefile:6:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/rake/rake_command.rb:20:in `block in perform'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/rake/rake_command.rb:18:in `perform'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command.rb:52:in `invoke'
+/var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands.rb:18:in `<main>'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/home/harsh/bv_training/blog/bin/rails:5:in `<top (required)>'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `load'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `call'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/command.rb:7:in `call'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client.rb:30:in `run'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/bin/spring:49:in `<top (required)>'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `load'
+/var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `<top (required)>'
+/home/harsh/bv_training/blog/bin/spring:10:in `block in <top (required)>'
+/home/harsh/bv_training/blog/bin/spring:7:in `tap'
+/home/harsh/bv_training/blog/bin/spring:7:in `<top (required)>'
+bin/rails:2:in `load'
+bin/rails:2:in `<main>'
+(See full trace by running task with --trace)
+harsh@harsh-HP-Notebook:~/bv_training/blog$ bin/rails server
+=> Booting Puma
+=> Rails 6.1.3.2 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Exiting
+Traceback (most recent call last):
+	76: from bin/rails:2:in `<main>'
+	75: from bin/rails:2:in `load'
+	74: from /home/harsh/bv_training/blog/bin/spring:7:in `<top (required)>'
+	73: from /home/harsh/bv_training/blog/bin/spring:7:in `tap'
+	72: from /home/harsh/bv_training/blog/bin/spring:10:in `block in <top (required)>'
+	71: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	70: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	69: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `<top (required)>'
+	68: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `load'
+	67: from /var/lib/gems/2.7.0/gems/spring-2.1.1/bin/spring:49:in `<top (required)>'
+	66: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client.rb:30:in `run'
+	65: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/command.rb:7:in `call'
+	64: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `call'
+	63: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `load'
+	62: from /home/harsh/bv_training/blog/bin/rails:5:in `<top (required)>'
+	61: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	60: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	59: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	58: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	57: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	56: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands.rb:18:in `<main>'
+	55: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command.rb:50:in `invoke'
+	54: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/command/base.rb:69:in `perform'
+	53: from /usr/lib/ruby/vendor_ruby/thor.rb:369:in `dispatch'
+	52: from /usr/lib/ruby/vendor_ruby/thor/invocation.rb:126:in `invoke_command'
+	51: from /usr/lib/ruby/vendor_ruby/thor/command.rb:27:in `run'
+	50: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `perform'
+	49: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:135:in `tap'
+	48: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:144:in `block in perform'
+	47: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:37:in `start'
+	46: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/commands/server/server_command.rb:77:in `log_to_stdout'
+	45: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:422:in `wrapped_app'
+	44: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:249:in `app'
+	43: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/server.rb:349:in `build_app_and_options_from_config'
+	42: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:66:in `parse_file'
+	41: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:105:in `load_file'
+	40: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `new_from_string'
+	39: from /var/lib/gems/2.7.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `eval'
+	38: from config.ru:3:in `block in <main>'
+	37: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:53:in `require_relative'
+	36: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `require'
+	35: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:299:in `load_dependency'
+	34: from /var/lib/gems/2.7.0/gems/activesupport-6.1.3.2/lib/active_support/dependencies.rb:332:in `block in require'
+	33: from /var/lib/gems/2.7.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+	32: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	31: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	30: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	29: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	28: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	27: from /home/harsh/bv_training/blog/config/environment.rb:5:in `<main>'
+	26: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/application.rb:384:in `initialize!'
+	25: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:60:in `run_initializers'
+	24: from /usr/lib/ruby/2.7.0/tsort.rb:205:in `tsort_each'
+	23: from /usr/lib/ruby/2.7.0/tsort.rb:226:in `tsort_each'
+	22: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each_strongly_connected_component'
+	21: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `call'
+	20: from /usr/lib/ruby/2.7.0/tsort.rb:347:in `each'
+	19: from /usr/lib/ruby/2.7.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	18: from /usr/lib/ruby/2.7.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	17: from /usr/lib/ruby/2.7.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	16: from /usr/lib/ruby/2.7.0/tsort.rb:228:in `block in tsort_each'
+	15: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:61:in `block in run_initializers'
+	14: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `run'
+	13: from /var/lib/gems/2.7.0/gems/railties-6.1.3.2/lib/rails/initializable.rb:32:in `instance_exec'
+	12: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/railtie.rb:41:in `block in <class:Engine>'
+	11: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker.rb:35:in `bootstrap'
+	10: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/commands.rb:47:in `bootstrap'
+	 9: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:18:in `refresh'
+	 8: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/manifest.rb:83:in `load'
+	 7: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:51:in `public_manifest_path'
+	 6: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:47:in `public_output_path'
+	 5: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:43:in `public_path'
+	 4: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:88:in `fetch'
+	 3: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:92:in `data'
+	 2: from /var/lib/gems/2.7.0/gems/webpacker-5.4.0/lib/webpacker/configuration.rb:97:in `load'
+	 1: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/compile_cache/yaml.rb:113:in `load_file'
+/usr/lib/ruby/2.7.0/psych.rb:576:in `load_file': unknown keyword: :aliases (ArgumentError)
+	77: from bin/rails:2:in `<main>'
+	76: from bin/rails:2:in `load'
+	75: from /home/harsh/bv_training/blog/bin/spring:7:in `<top (required)>'
+	74: from /home/harsh/bv_training/blog/bin/spring:7:in `tap'
+	73: from /home/harsh/bv_training/blog/bin/spring:10:in `block in <top (required)>'
+	72: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	71: from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:72:in `require'
+	70: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `<top (required)>'
+	69: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `load'
+	68: from /var/lib/gems/2.7.0/gems/spring-2.1.1/bin/spring:49:in `<top (required)>'
+	67: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client.rb:30:in `run'
+	66: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/command.rb:7:in `call'
+	65: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `call'
+	64: from /var/lib/gems/2.7.0/gems/spring-2.1.1/lib/spring/client/rails.rb:28:in `load'
+	63: from /home/harsh/bv_training/blog/bin/rails:5:in `<top (required)>'
+	62: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	61: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	60: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	59: from /var/lib/gems/2.7.0/gems/bootsnap-1.7.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi

@@ -1,0 +1,1670 @@
+harsh@harsh-HP-Notebook:~$ rvm install 2.3.3
+Searching for binary rubies, this might take some time.
+Found remote file https://rvm_io.global.ssl.fastly.net/binaries/ubuntu/20.04/x86_64/ruby-2.3.3.tar.bz2
+ruby-2.3.3 - #configure
+ruby-2.3.3 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 27.9M  100 27.9M    0     0  1050k      0  0:00:27  0:00:27 --:--:-- 5941k
+ruby-2.3.3 - #validate archive
+ruby-2.3.3 - #extract
+ruby-2.3.3 - #validate binary
+Libraries missing for ruby-2.3.3: libcrypto.so.1.0.0,libssl.so.1.0.0. Refer to your system manual for installing libraries
+Mounting remote ruby failed with status 10, trying to compile.
+Installing Ruby from source to: /home/harsh/.rvm/rubies/ruby-2.3.3, this may take a while depending on your cpu(s)...
+ruby-2.3.3 - #downloading ruby-2.3.3, this may take a while depending on your connection...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 13.7M  100 13.7M    0     0  5490k      0  0:00:02  0:00:02 --:--:-- 5488k
+ruby-2.3.3 - #extracting ruby-2.3.3 to /home/harsh/.rvm/src/ruby-2.3.3.....
+ruby-2.3.3 - #applying patch /home/harsh/.rvm/patches/ruby/ruby_2_3_gcc7.patch.
+ruby-2.3.3 - #applying patch /home/harsh/.rvm/patches/ruby/2.3.3/random_c_using_NR_prefix.patch.
+ruby-2.3.3 - #configuring..........................................................
+ruby-2.3.3 - #post-configuration..
+ruby-2.3.3 - #compiling......................................................................................................................-
+ruby-2.3.3 - #installing..............
+ruby-2.3.3 - #making binaries executable..
+ruby-2.3.3 - #downloading rubygems-3.0.9
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  865k  100  865k    0     0  1998k      0 --:--:-- --:--:-- --:--:-- 1998k
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.3.3 - #extracting rubygems-3.0.9.....
+ruby-2.3.3 - #removing old rubygems.........
+ruby-2.3.3 - #installing rubygems-3.0.9..
+Error running 'env GEM_HOME=/home/harsh/.rvm/gems/ruby-2.3.3@global GEM_PATH= /home/harsh/.rvm/rubies/ruby-2.3.3/bin/ruby -d /home/harsh/.rvm/src/rubygems-3.0.9/setup.rb --no-document',
+please read /home/harsh/.rvm/log/1623668921_ruby-2.3.3/rubygems.install.log
+harsh@harsh-HP-Notebook:~$ rvm use
+Using /home/harsh/.rvm/gems/ruby-3.0.0
+harsh@harsh-HP-Notebook:~$ rvm use 2.3.3
+Using /home/harsh/.rvm/gems/ruby-2.3.3
+harsh@harsh-HP-Notebook:~$ 
+
+Resolution:
+harsh@harsh-HP-Notebook:~$ echo $GEM_HOME
+/home/harsh/.rvm/gems/ruby-2.3.3
+koi issue nahi hai
+bas 2 package missing hai
+run this
+rvm autolibs rvm_pkg
+
+it should fix it
+
+
+
+
+
+error -> sudo apt install -y ctags cscope sysstat htop
+  Package ctags is a virtual package provided by:
+    universal-ctags 0+git20200824-1
+    exuberant-ctags 1:5.9~svn20110310-13
+  You should explicitly select one to install.
+
+  E: Package 'ctags' has no installation candidate
+
+  resolve -> run  sudo apt install -y exuberant-ctags cscope sysstat htop 
+  
+ 
+  
+  While installing storeserver, after ./configure
+make
+mkdir -p /home/harsh/storeserver/bin;
+go build -o /home/harsh/storeserver/bin/bvs2 /home/harsh/storeserver/src/storeserver.go;
+go: downloading github.com/cihub/seelog v0.0.0-20170130134532-f561c5e57575
+go: extracting github.com/cihub/seelog v0.0.0-20170130134532-f561c5e57575
+go: finding github.com/cihub/seelog v0.0.0-20170130134532-f561c5e57575
+go build command-line-arguments: open /home/harsh/storeserver/bin/bvs2: permission denied
+make: *** [Makefile:15: build] Error 1
+
+
+Harsh Mehta, 26 min
+Sir ye permission provide kri toh chal gaya sudo chmod -R 777 bin
+
+use sudo make install instead of make install
+
+
+Setting Up Dragoman
+
+clone blogvault repo 
+now use this blogvault directory for further tasks.
+Also add composer.json file from dragoman repo to var/www/html
+After that run the following commands in /var/www/html
+sudo apt install composer
+sudo composer install
+
+
+
+
+
+
+harsh@harsh-HP-Notebook:~/snap$ cd ..
+harsh@harsh-HP-Notebook:~$ go version
+go version go1.13.5 linux/amd64
+harsh@harsh-HP-Notebook:~$ vim .bashrc
+harsh@harsh-HP-Notebook:~$ wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+[sudo] password for harsh: 
+OK
+harsh@harsh-HP-Notebook:~$ sudo apt-get install gnupg
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+gnupg is already the newest version (2.2.19-3ubuntu2.1).
+The following packages were automatically installed and are no longer required:
+  gyp libjs-inherits libjs-is-typedarray libjs-psl libjs-typedarray-to-buffer
+  libpython2-stdlib libpython2.7-minimal libpython2.7-stdlib libuv1-dev
+  node-abbrev node-ajv node-ansi node-ansi-align node-ansi-regex
+  node-ansi-styles node-ansistyles node-aproba node-archy
+  node-are-we-there-yet node-asap node-asn1 node-assert-plus node-asynckit
+  node-aws-sign2 node-aws4 node-balanced-match node-bcrypt-pbkdf node-bl
+  node-bluebird node-boxen node-brace-expansion node-builtin-modules
+  node-builtins node-cacache node-call-limit node-camelcase node-caseless
+  node-chalk node-chownr node-ci-info node-cli-boxes node-cliui node-clone
+  node-co node-color-convert node-color-name node-colors node-columnify
+  node-combined-stream node-concat-map node-concat-stream node-config-chain
+  node-configstore node-console-control-strings node-copy-concurrently
+  node-core-util-is node-cross-spawn node-crypto-random-string node-cyclist
+  node-dashdash node-debug node-decamelize node-decompress-response
+  node-deep-extend node-defaults node-define-properties node-delayed-stream
+  node-delegates node-detect-indent node-detect-newline node-dot-prop
+  node-duplexer3 node-duplexify node-ecc-jsbn node-editor node-encoding
+  node-end-of-stream node-err-code node-errno node-es6-promise
+  node-escape-string-regexp node-execa node-extend node-extsprintf
+  node-fast-deep-equal node-find-up node-flush-write-stream node-forever-agent
+  node-form-data node-from2 node-fs-vacuum node-fs-write-stream-atomic
+  node-fs.realpath node-function-bind node-gauge node-genfun
+  node-get-caller-file node-get-stream node-getpass node-glob node-got
+  node-graceful-fs node-har-schema node-har-validator node-has-flag
+  node-has-symbol-support-x node-has-to-string-tag-x node-has-unicode
+  node-hosted-git-info node-http-signature node-iconv-lite node-iferr
+  node-import-lazy node-imurmurhash node-inflight node-inherits node-ini
+  node-invert-kv node-ip node-ip-regex node-is-npm node-is-obj node-is-object
+  node-is-path-inside node-is-plain-obj node-is-retry-allowed node-is-stream
+  node-is-typedarray node-isarray node-isexe node-isstream node-isurl
+  node-jsbn node-json-parse-better-errors node-json-schema
+  node-json-schema-traverse node-json-stable-stringify
+  node-json-stringify-safe node-jsonify node-jsonparse node-jsonstream
+  node-jsprim node-latest-version node-lazy-property node-lcid node-libnpx
+  node-locate-path node-lockfile node-lodash node-lodash-packages
+  node-lowercase-keys node-lru-cache node-make-dir node-mem node-mime
+  node-mime-types node-mimic-fn node-mimic-response node-minimatch
+  node-minimist node-mississippi node-mkdirp node-move-concurrently node-ms
+  node-mute-stream node-nopt node-normalize-package-data node-npm-bundled
+  node-npm-package-arg node-npm-run-path node-npmlog node-number-is-nan
+  node-oauth-sign node-object-assign node-once node-opener node-os-locale
+  node-os-tmpdir node-osenv node-p-cancelable node-p-finally node-p-is-promise
+  node-p-limit node-p-locate node-p-timeout node-package-json
+  node-parallel-transform node-path-exists node-path-is-absolute
+  node-path-is-inside node-performance-now node-pify node-prepend-http
+  node-process-nextick-args node-promise-inflight node-promise-retry
+  node-promzard node-proto-list node-prr node-pseudomap node-psl node-pump
+  node-pumpify node-punycode node-qs node-qw node-rc node-read
+  node-read-package-json node-readable-stream node-registry-auth-token
+  node-registry-url node-request node-require-directory
+  node-require-main-filename node-resolve node-resolve-from node-retry
+  node-rimraf node-run-queue node-safe-buffer node-semver node-semver-diff
+  node-set-blocking node-sha node-shebang-command node-shebang-regex
+  node-signal-exit node-slash node-slide node-sorted-object node-spdx-correct
+  node-spdx-exceptions node-spdx-expression-parse node-spdx-license-ids
+  node-sshpk node-ssri node-stream-each node-stream-iterate node-stream-shift
+  node-strict-uri-encode node-string-decoder node-string-width node-strip-ansi
+  node-strip-eof node-strip-json-comments node-supports-color node-tar
+  node-term-size node-text-table node-through node-through2 node-timed-out
+  node-tough-cookie node-tunnel-agent node-tweetnacl node-typedarray
+  node-typedarray-to-buffer node-uid-number node-unique-filename
+  node-unique-string node-unpipe node-uri-js node-url-parse-lax
+  node-url-to-options node-util-deprecate node-uuid
+  node-validate-npm-package-license node-validate-npm-package-name node-verror
+  node-wcwidth.js node-which node-which-module node-wide-align
+  node-widest-line node-wrap-ansi node-wrappy node-write-file-atomic
+  node-xdg-basedir node-xtend node-y18n node-yallist node-yargs
+  node-yargs-parser python-pkg-resources python2 python2-minimal python2.7
+  python2.7-minimal
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+harsh@harsh-HP-Notebook:~$ wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+OK
+harsh@harsh-HP-Notebook:~$ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse
+harsh@harsh-HP-Notebook:~$ sudo apt-get update
+Hit:1 http://in.archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://in.archive.ubuntu.com/ubuntu focal-updates InRelease     
+Hit:3 http://in.archive.ubuntu.com/ubuntu focal-backports InRelease            
+Ign:4 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 InRelease      
+Get:5 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 Release [5,378 B]
+Get:6 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 Release.gpg [801 B]
+Hit:7 http://security.ubuntu.com/ubuntu focal-security InRelease
+Get:8 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4/multiverse arm64 Packages [9,065 B]
+Get:9 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4/multiverse amd64 Packages [12.2 kB]
+Hit:10 https://dl.yarnpkg.com/debian stable InRelease
+Hit:11 https://download.sublimetext.com apt/stable/ InRelease                  
+Fetched 27.5 kB in 6s (4,387 B/s)                                              
+Reading package lists... Done
+harsh@harsh-HP-Notebook:~$ sudo apt-get install -y mongodb-org
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  gyp libjs-inherits libjs-is-typedarray libjs-psl libjs-typedarray-to-buffer
+  libpython2-stdlib libpython2.7-minimal libpython2.7-stdlib libuv1-dev
+  node-abbrev node-ajv node-ansi node-ansi-align node-ansi-regex
+  node-ansi-styles node-ansistyles node-aproba node-archy
+  node-are-we-there-yet node-asap node-asn1 node-assert-plus node-asynckit
+  node-aws-sign2 node-aws4 node-balanced-match node-bcrypt-pbkdf node-bl
+  node-bluebird node-boxen node-brace-expansion node-builtin-modules
+  node-builtins node-cacache node-call-limit node-camelcase node-caseless
+  node-chalk node-chownr node-ci-info node-cli-boxes node-cliui node-clone
+  node-co node-color-convert node-color-name node-colors node-columnify
+  node-combined-stream node-concat-map node-concat-stream node-config-chain
+  node-configstore node-console-control-strings node-copy-concurrently
+  node-core-util-is node-cross-spawn node-crypto-random-string node-cyclist
+  node-dashdash node-debug node-decamelize node-decompress-response
+  node-deep-extend node-defaults node-define-properties node-delayed-stream
+  node-delegates node-detect-indent node-detect-newline node-dot-prop
+  node-duplexer3 node-duplexify node-ecc-jsbn node-editor node-encoding
+  node-end-of-stream node-err-code node-errno node-es6-promise
+  node-escape-string-regexp node-execa node-extend node-extsprintf
+  node-fast-deep-equal node-find-up node-flush-write-stream node-forever-agent
+  node-form-data node-from2 node-fs-vacuum node-fs-write-stream-atomic
+  node-fs.realpath node-function-bind node-gauge node-genfun
+  node-get-caller-file node-get-stream node-getpass node-glob node-got
+  node-graceful-fs node-har-schema node-har-validator node-has-flag
+  node-has-symbol-support-x node-has-to-string-tag-x node-has-unicode
+  node-hosted-git-info node-http-signature node-iconv-lite node-iferr
+  node-import-lazy node-imurmurhash node-inflight node-inherits node-ini
+  node-invert-kv node-ip node-ip-regex node-is-npm node-is-obj node-is-object
+  node-is-path-inside node-is-plain-obj node-is-retry-allowed node-is-stream
+  node-is-typedarray node-isarray node-isexe node-isstream node-isurl
+  node-jsbn node-json-parse-better-errors node-json-schema
+  node-json-schema-traverse node-json-stable-stringify
+  node-json-stringify-safe node-jsonify node-jsonparse node-jsonstream
+  node-jsprim node-latest-version node-lazy-property node-lcid node-libnpx
+  node-locate-path node-lockfile node-lodash node-lodash-packages
+  node-lowercase-keys node-lru-cache node-make-dir node-mem node-mime
+  node-mime-types node-mimic-fn node-mimic-response node-minimatch
+  node-minimist node-mississippi node-mkdirp node-move-concurrently node-ms
+  node-mute-stream node-nopt node-normalize-package-data node-npm-bundled
+  node-npm-package-arg node-npm-run-path node-npmlog node-number-is-nan
+  node-oauth-sign node-object-assign node-once node-opener node-os-locale
+  node-os-tmpdir node-osenv node-p-cancelable node-p-finally node-p-is-promise
+  node-p-limit node-p-locate node-p-timeout node-package-json
+  node-parallel-transform node-path-exists node-path-is-absolute
+  node-path-is-inside node-performance-now node-pify node-prepend-http
+  node-process-nextick-args node-promise-inflight node-promise-retry
+  node-promzard node-proto-list node-prr node-pseudomap node-psl node-pump
+  node-pumpify node-punycode node-qs node-qw node-rc node-read
+  node-read-package-json node-readable-stream node-registry-auth-token
+  node-registry-url node-request node-require-directory
+  node-require-main-filename node-resolve node-resolve-from node-retry
+  node-rimraf node-run-queue node-safe-buffer node-semver node-semver-diff
+  node-set-blocking node-sha node-shebang-command node-shebang-regex
+  node-signal-exit node-slash node-slide node-sorted-object node-spdx-correct
+  node-spdx-exceptions node-spdx-expression-parse node-spdx-license-ids
+  node-sshpk node-ssri node-stream-each node-stream-iterate node-stream-shift
+  node-strict-uri-encode node-string-decoder node-string-width node-strip-ansi
+  node-strip-eof node-strip-json-comments node-supports-color node-tar
+  node-term-size node-text-table node-through node-through2 node-timed-out
+  node-tough-cookie node-tunnel-agent node-tweetnacl node-typedarray
+  node-typedarray-to-buffer node-uid-number node-unique-filename
+  node-unique-string node-unpipe node-uri-js node-url-parse-lax
+  node-url-to-options node-util-deprecate node-uuid
+  node-validate-npm-package-license node-validate-npm-package-name node-verror
+  node-wcwidth.js node-which node-which-module node-wide-align
+  node-widest-line node-wrap-ansi node-wrappy node-write-file-atomic
+  node-xdg-basedir node-xtend node-y18n node-yallist node-yargs
+  node-yargs-parser python-pkg-resources python2 python2-minimal python2.7
+  python2.7-minimal
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  mongodb-database-tools mongodb-org-database-tools-extra mongodb-org-mongos
+  mongodb-org-server mongodb-org-shell mongodb-org-tools
+The following NEW packages will be installed:
+  mongodb-database-tools mongodb-org mongodb-org-database-tools-extra
+  mongodb-org-mongos mongodb-org-server mongodb-org-shell mongodb-org-tools
+0 upgraded, 7 newly installed, 0 to remove and 4 not upgraded.
+Need to get 103 MB of archives.
+After this operation, 202 MB of additional disk space will be used.
+Get:1 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4/multiverse amd64 mongodb-database-tools amd64 100.3.1 [52.7 MB]
+Get:2 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4/multiverse amd64 mongodb-org-shell amd64 4.4.6 [13.3 MB]
+Get:3 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4/multiverse amd64 mongodb-org-server amd64 4.4.6 [20.6 MB]
+Get:4 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4/multiverse amd64 mongodb-org-mongos amd64 4.4.6 [15.9 MB]
+Get:5 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4/multiverse amd64 mongodb-org-database-tools-extra amd64 4.4.6 [7,716 B]
+Get:6 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4/multiverse amd64 mongodb-org-tools amd64 4.4.6 [2,892 B]
+Get:7 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4/multiverse amd64 mongodb-org amd64 4.4.6 [3,524 B]
+Fetched 103 MB in 18s (5,637 kB/s)                                             
+Selecting previously unselected package mongodb-database-tools.
+(Reading database ... 231644 files and directories currently installed.)
+Preparing to unpack .../0-mongodb-database-tools_100.3.1_amd64.deb ...
+Unpacking mongodb-database-tools (100.3.1) ...
+Selecting previously unselected package mongodb-org-shell.
+Preparing to unpack .../1-mongodb-org-shell_4.4.6_amd64.deb ...
+Unpacking mongodb-org-shell (4.4.6) ...
+Selecting previously unselected package mongodb-org-server.
+Preparing to unpack .../2-mongodb-org-server_4.4.6_amd64.deb ...
+Unpacking mongodb-org-server (4.4.6) ...
+Selecting previously unselected package mongodb-org-mongos.
+Preparing to unpack .../3-mongodb-org-mongos_4.4.6_amd64.deb ...
+Unpacking mongodb-org-mongos (4.4.6) ...
+Selecting previously unselected package mongodb-org-database-tools-extra.
+Preparing to unpack .../4-mongodb-org-database-tools-extra_4.4.6_amd64.deb ...
+Unpacking mongodb-org-database-tools-extra (4.4.6) ...
+Selecting previously unselected package mongodb-org-tools.
+Preparing to unpack .../5-mongodb-org-tools_4.4.6_amd64.deb ...
+Unpacking mongodb-org-tools (4.4.6) ...
+Selecting previously unselected package mongodb-org.
+Preparing to unpack .../6-mongodb-org_4.4.6_amd64.deb ...
+Unpacking mongodb-org (4.4.6) ...
+Setting up mongodb-org-server (4.4.6) ...
+Adding system user `mongodb' (UID 127) ...
+Adding new user `mongodb' (UID 127) with group `nogroup' ...
+Not creating home directory `/home/mongodb'.
+Adding group `mongodb' (GID 134) ...
+Done.
+Adding user `mongodb' to group `mongodb' ...
+Adding user mongodb to group mongodb
+Done.
+Setting up mongodb-org-shell (4.4.6) ...
+Setting up mongodb-database-tools (100.3.1) ...
+Setting up mongodb-org-mongos (4.4.6) ...
+Setting up mongodb-org-database-tools-extra (4.4.6) ...
+Setting up mongodb-org-tools (4.4.6) ...
+Setting up mongodb-org (4.4.6) ...
+Processing triggers for man-db (2.9.1-1) ...
+harsh@harsh-HP-Notebook:~$ ps --no-headers -o comm 1
+systemd
+harsh@harsh-HP-Notebook:~$ sudo systemctl start mongod
+harsh@harsh-HP-Notebook:~$ sudo systemctl status mongod
+● mongod.service - MongoDB Database Server
+     Loaded: loaded (/lib/systemd/system/mongod.service; disabled; vendor prese>
+     Active: active (running) since Mon 2021-06-14 18:56:41 IST; 16s ago
+       Docs: https://docs.mongodb.org/manual
+   Main PID: 76119 (mongod)
+     Memory: 62.5M
+     CGroup: /system.slice/mongod.service
+             └─76119 /usr/bin/mongod --config /etc/mongod.conf
+
+Jun 14 18:56:41 harsh-HP-Notebook systemd[1]: Started MongoDB Database Server.
+harsh@harsh-HP-Notebook:~$ sudo systemctl stop mongod
+harsh@harsh-HP-Notebook:~$ mongo
+MongoDB shell version v4.4.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Error: couldn't connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Error connecting to 127.0.0.1:27017 :: caused by :: Connection refused :
+connect@src/mongo/shell/mongo.js:374:17
+@(connect):2:6
+exception: connect failed
+exiting with code 1
+harsh@harsh-HP-Notebook:~$ sudo systemctl start mongod
+harsh@harsh-HP-Notebook:~$ mongo
+MongoDB shell version v4.4.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("51ceb859-fff3-43b7-ad49-e0a24fb63b7b") }
+MongoDB server version: 4.4.6
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+	https://docs.mongodb.com/
+Questions? Try the MongoDB Developer Community Forums
+	https://community.mongodb.com
+---
+The server generated these startup warnings when booting: 
+        2021-06-14T18:58:15.091+05:30: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+        2021-06-14T18:58:17.935+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> ^C
+bye
+harsh@harsh-HP-Notebook:~$ sudo apt update
+Ign:1 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 InRelease
+Hit:2 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 Release
+Hit:4 http://in.archive.ubuntu.com/ubuntu focal InRelease
+Hit:5 http://in.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:6 http://in.archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:7 https://dl.yarnpkg.com/debian stable InRelease
+Hit:8 http://security.ubuntu.com/ubuntu focal-security InRelease               
+Hit:9 https://download.sublimetext.com apt/stable/ InRelease     
+Reading package lists... Done                             
+Building dependency tree       
+Reading state information... Done
+4 packages can be upgraded. Run 'apt list --upgradable' to see them.
+harsh@harsh-HP-Notebook:~$ sudo apt install redis-server
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  gyp libjs-inherits libjs-is-typedarray libjs-psl libjs-typedarray-to-buffer
+  libpython2-stdlib libpython2.7-minimal libpython2.7-stdlib libuv1-dev
+  node-abbrev node-ajv node-ansi node-ansi-align node-ansi-regex
+  node-ansi-styles node-ansistyles node-aproba node-archy
+  node-are-we-there-yet node-asap node-asn1 node-assert-plus node-asynckit
+  node-aws-sign2 node-aws4 node-balanced-match node-bcrypt-pbkdf node-bl
+  node-bluebird node-boxen node-brace-expansion node-builtin-modules
+  node-builtins node-cacache node-call-limit node-camelcase node-caseless
+  node-chalk node-chownr node-ci-info node-cli-boxes node-cliui node-clone
+  node-co node-color-convert node-color-name node-colors node-columnify
+  node-combined-stream node-concat-map node-concat-stream node-config-chain
+  node-configstore node-console-control-strings node-copy-concurrently
+  node-core-util-is node-cross-spawn node-crypto-random-string node-cyclist
+  node-dashdash node-debug node-decamelize node-decompress-response
+  node-deep-extend node-defaults node-define-properties node-delayed-stream
+  node-delegates node-detect-indent node-detect-newline node-dot-prop
+  node-duplexer3 node-duplexify node-ecc-jsbn node-editor node-encoding
+  node-end-of-stream node-err-code node-errno node-es6-promise
+  node-escape-string-regexp node-execa node-extend node-extsprintf
+  node-fast-deep-equal node-find-up node-flush-write-stream node-forever-agent
+  node-form-data node-from2 node-fs-vacuum node-fs-write-stream-atomic
+  node-fs.realpath node-function-bind node-gauge node-genfun
+  node-get-caller-file node-get-stream node-getpass node-glob node-got
+  node-graceful-fs node-har-schema node-har-validator node-has-flag
+  node-has-symbol-support-x node-has-to-string-tag-x node-has-unicode
+  node-hosted-git-info node-http-signature node-iconv-lite node-iferr
+  node-import-lazy node-imurmurhash node-inflight node-inherits node-ini
+  node-invert-kv node-ip node-ip-regex node-is-npm node-is-obj node-is-object
+  node-is-path-inside node-is-plain-obj node-is-retry-allowed node-is-stream
+  node-is-typedarray node-isarray node-isexe node-isstream node-isurl
+  node-jsbn node-json-parse-better-errors node-json-schema
+  node-json-schema-traverse node-json-stable-stringify
+  node-json-stringify-safe node-jsonify node-jsonparse node-jsonstream
+  node-jsprim node-latest-version node-lazy-property node-lcid node-libnpx
+  node-locate-path node-lockfile node-lodash node-lodash-packages
+  node-lowercase-keys node-lru-cache node-make-dir node-mem node-mime
+  node-mime-types node-mimic-fn node-mimic-response node-minimatch
+  node-minimist node-mississippi node-mkdirp node-move-concurrently node-ms
+  node-mute-stream node-nopt node-normalize-package-data node-npm-bundled
+  node-npm-package-arg node-npm-run-path node-npmlog node-number-is-nan
+  node-oauth-sign node-object-assign node-once node-opener node-os-locale
+  node-os-tmpdir node-osenv node-p-cancelable node-p-finally node-p-is-promise
+  node-p-limit node-p-locate node-p-timeout node-package-json
+  node-parallel-transform node-path-exists node-path-is-absolute
+  node-path-is-inside node-performance-now node-pify node-prepend-http
+  node-process-nextick-args node-promise-inflight node-promise-retry
+  node-promzard node-proto-list node-prr node-pseudomap node-psl node-pump
+  node-pumpify node-punycode node-qs node-qw node-rc node-read
+  node-read-package-json node-readable-stream node-registry-auth-token
+  node-registry-url node-request node-require-directory
+  node-require-main-filename node-resolve node-resolve-from node-retry
+  node-rimraf node-run-queue node-safe-buffer node-semver node-semver-diff
+  node-set-blocking node-sha node-shebang-command node-shebang-regex
+  node-signal-exit node-slash node-slide node-sorted-object node-spdx-correct
+  node-spdx-exceptions node-spdx-expression-parse node-spdx-license-ids
+  node-sshpk node-ssri node-stream-each node-stream-iterate node-stream-shift
+  node-strict-uri-encode node-string-decoder node-string-width node-strip-ansi
+  node-strip-eof node-strip-json-comments node-supports-color node-tar
+  node-term-size node-text-table node-through node-through2 node-timed-out
+  node-tough-cookie node-tunnel-agent node-tweetnacl node-typedarray
+  node-typedarray-to-buffer node-uid-number node-unique-filename
+  node-unique-string node-unpipe node-uri-js node-url-parse-lax
+  node-url-to-options node-util-deprecate node-uuid
+  node-validate-npm-package-license node-validate-npm-package-name node-verror
+  node-wcwidth.js node-which node-which-module node-wide-align
+  node-widest-line node-wrap-ansi node-wrappy node-write-file-atomic
+  node-xdg-basedir node-xtend node-y18n node-yallist node-yargs
+  node-yargs-parser python-pkg-resources python2 python2-minimal python2.7
+  python2.7-minimal
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  libhiredis0.14 libjemalloc2 liblua5.1-0 lua-bitop lua-cjson redis-tools
+Suggested packages:
+  ruby-redis
+The following NEW packages will be installed:
+  libhiredis0.14 libjemalloc2 liblua5.1-0 lua-bitop lua-cjson redis-server
+  redis-tools
+0 upgraded, 7 newly installed, 0 to remove and 4 not upgraded.
+Need to get 915 kB of archives.
+After this operation, 4,077 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://in.archive.ubuntu.com/ubuntu focal/universe amd64 libhiredis0.14 amd64 0.14.0-6 [30.2 kB]
+Get:2 http://in.archive.ubuntu.com/ubuntu focal/universe amd64 libjemalloc2 amd64 5.2.1-1ubuntu1 [235 kB]
+Get:3 http://in.archive.ubuntu.com/ubuntu focal/universe amd64 liblua5.1-0 amd64 5.1.5-8.1build4 [99.9 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu focal/universe amd64 lua-bitop amd64 1.0.2-5 [6,680 B]
+Get:5 http://in.archive.ubuntu.com/ubuntu focal/universe amd64 lua-cjson amd64 2.1.0+dfsg-2.1 [17.4 kB]
+Get:6 http://in.archive.ubuntu.com/ubuntu focal/universe amd64 redis-tools amd64 5:5.0.7-2 [489 kB]
+Get:7 http://in.archive.ubuntu.com/ubuntu focal/universe amd64 redis-server amd64 5:5.0.7-2 [37.3 kB]
+Fetched 915 kB in 0s (2,209 kB/s)       
+Selecting previously unselected package libhiredis0.14:amd64.
+(Reading database ... 231691 files and directories currently installed.)
+Preparing to unpack .../0-libhiredis0.14_0.14.0-6_amd64.deb ...
+Unpacking libhiredis0.14:amd64 (0.14.0-6) ...
+Selecting previously unselected package libjemalloc2:amd64.
+Preparing to unpack .../1-libjemalloc2_5.2.1-1ubuntu1_amd64.deb ...
+Unpacking libjemalloc2:amd64 (5.2.1-1ubuntu1) ...
+Selecting previously unselected package liblua5.1-0:amd64.
+Preparing to unpack .../2-liblua5.1-0_5.1.5-8.1build4_amd64.deb ...
+Unpacking liblua5.1-0:amd64 (5.1.5-8.1build4) ...
+Selecting previously unselected package lua-bitop:amd64.
+Preparing to unpack .../3-lua-bitop_1.0.2-5_amd64.deb ...
+Unpacking lua-bitop:amd64 (1.0.2-5) ...
+Selecting previously unselected package lua-cjson:amd64.
+Preparing to unpack .../4-lua-cjson_2.1.0+dfsg-2.1_amd64.deb ...
+Unpacking lua-cjson:amd64 (2.1.0+dfsg-2.1) ...
+Selecting previously unselected package redis-tools.
+Preparing to unpack .../5-redis-tools_5%3a5.0.7-2_amd64.deb ...
+Unpacking redis-tools (5:5.0.7-2) ...
+Selecting previously unselected package redis-server.
+Preparing to unpack .../6-redis-server_5%3a5.0.7-2_amd64.deb ...
+Unpacking redis-server (5:5.0.7-2) ...
+Setting up libjemalloc2:amd64 (5.2.1-1ubuntu1) ...
+Setting up lua-cjson:amd64 (2.1.0+dfsg-2.1) ...
+Setting up lua-bitop:amd64 (1.0.2-5) ...
+Setting up liblua5.1-0:amd64 (5.1.5-8.1build4) ...
+Setting up libhiredis0.14:amd64 (0.14.0-6) ...
+Setting up redis-tools (5:5.0.7-2) ...
+Setting up redis-server (5:5.0.7-2) ...
+Created symlink /etc/systemd/system/redis.service → /lib/systemd/system/redis-se
+rver.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/redis-server.service
+ → /lib/systemd/system/redis-server.service.
+Processing triggers for systemd (245.4-4ubuntu3.6) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+harsh@harsh-HP-Notebook:~$ sudo vim /etc/redis/redis.conf
+harsh@harsh-HP-Notebook:~$ sudo vim /etc/redis/redis.conf
+harsh@harsh-HP-Notebook:~$ sudo systemctl restart redis.service
+harsh@harsh-HP-Notebook:~$ mkdir store_server
+harsh@harsh-HP-Notebook:~$ cd store_server/
+harsh@harsh-HP-Notebook:~/store_server$ git clone git@github.com:blogvault/storeserver.git
+Cloning into 'storeserver'...
+remote: Enumerating objects: 448, done.
+remote: Counting objects: 100% (32/32), done.
+remote: Compressing objects: 100% (32/32), done.
+remote: Total 448 (delta 0), reused 0 (delta 0), pack-reused 416
+Receiving objects: 100% (448/448), 75.61 KiB | 307.00 KiB/s, done.
+Resolving deltas: 100% (214/214), done.
+harsh@harsh-HP-Notebook:~/store_server$ cd storeserver/
+harsh@harsh-HP-Notebook:~/store_server/storeserver$ cd
+harsh@harsh-HP-Notebook:~$ git clone git@github.com:blogvault/storeserver.git
+Cloning into 'storeserver'...
+remote: Enumerating objects: 448, done.
+remote: Counting objects: 100% (32/32), done.
+remote: Compressing objects: 100% (32/32), done.
+remote: Total 448 (delta 0), reused 0 (delta 0), pack-reused 416
+Receiving objects: 100% (448/448), 75.61 KiB | 101.00 KiB/s, done.
+Resolving deltas: 100% (214/214), done.
+harsh@harsh-HP-Notebook:~$ cd storeserver/
+harsh@harsh-HP-Notebook:~/storeserver$ ./configure
+Info: Configuring systemd unit file.
+Info: Configuring server log file.
+Info: Configuring server config file.
+Info: Configuring store disks.
+Info: Configuration is completed.
+harsh@harsh-HP-Notebook:~/storeserver$ sudo make
+mkdir -p /home/harsh/storeserver/bin;
+go build -o /home/harsh/storeserver/bin/bvs2 /home/harsh/storeserver/src/storeserver.go;
+/bin/sh: 1: go: not found
+make: *** [Makefile:15: build] Error 127
+harsh@harsh-HP-Notebook:~/storeserver$ go version
+go version go1.13.5 linux/amd64
+harsh@harsh-HP-Notebook:~/storeserver$ make
+mkdir -p /home/harsh/storeserver/bin;
+go build -o /home/harsh/storeserver/bin/bvs2 /home/harsh/storeserver/src/storeserver.go;
+go: downloading github.com/cihub/seelog v0.0.0-20170130134532-f561c5e57575
+go: extracting github.com/cihub/seelog v0.0.0-20170130134532-f561c5e57575
+go: finding github.com/cihub/seelog v0.0.0-20170130134532-f561c5e57575
+go build command-line-arguments: open /home/harsh/storeserver/bin/bvs2: permission denied
+make: *** [Makefile:15: build] Error 1
+harsh@harsh-HP-Notebook:~/storeserver$ sudo make
+mkdir -p /home/harsh/storeserver/bin;
+go build -o /home/harsh/storeserver/bin/bvs2 /home/harsh/storeserver/src/storeserver.go;
+/bin/sh: 1: go: not found
+make: *** [Makefile:15: build] Error 127
+harsh@harsh-HP-Notebook:~/storeserver$ sudo chmod -R 750 bin
+harsh@harsh-HP-Notebook:~/storeserver$ make
+mkdir -p /home/harsh/storeserver/bin;
+go build -o /home/harsh/storeserver/bin/bvs2 /home/harsh/storeserver/src/storeserver.go;
+go build command-line-arguments: open /home/harsh/storeserver/bin/bvs2: permission denied
+make: *** [Makefile:15: build] Error 1
+harsh@harsh-HP-Notebook:~/storeserver$ sudo chmod -R 777 bin
+harsh@harsh-HP-Notebook:~/storeserver$ make
+mkdir -p /home/harsh/storeserver/bin;
+go build -o /home/harsh/storeserver/bin/bvs2 /home/harsh/storeserver/src/storeserver.go;
+harsh@harsh-HP-Notebook:~/storeserver$ ^C
+harsh@harsh-HP-Notebook:~/storeserver$ make install
+if [ ! -f "/lib/systemd/system/bvs2.service" ]; then \
+	cp /home/harsh/storeserver/config/bvs2.service /lib/systemd/system/bvs2.service; \
+fi;
+cp: cannot create regular file '/lib/systemd/system/bvs2.service': Permission denied
+make: *** [Makefile:30: install] Error 1
+harsh@harsh-HP-Notebook:~/storeserver$ sudo make install
+if [ ! -f "/lib/systemd/system/bvs2.service" ]; then \
+	cp /home/harsh/storeserver/config/bvs2.service /lib/systemd/system/bvs2.service; \
+fi;
+if [ ! -f "/etc/systemd/system/multi-user.target.wants/bvs2.service" ]; then \
+	ln -s /lib/systemd/system/bvs2.service /etc/systemd/system/multi-user.target.wants/bvs2.service; \
+fi;
+systemctl daemon-reload;
+harsh@harsh-HP-Notebook:~/storeserver$ service bvs2 start
+harsh@harsh-HP-Notebook:~/storeserver$ service bvs2 status
+● bvs2.service - BlogVault: StoreServer
+     Loaded: loaded (/lib/systemd/system/bvs2.service; enabled; vendor preset: >
+     Active: active (running) since Mon 2021-06-14 19:30:38 IST; 18s ago
+   Main PID: 78668 (bvs2)
+      Tasks: 6 (limit: 4550)
+     Memory: 1.2M
+     CGroup: /system.slice/bvs2.service
+             └─78668 /home/harsh/storeserver/bin/bvs2
+
+Jun 14 19:30:38 harsh-HP-Notebook systemd[1]: Started BlogVault: StoreServer.
+harsh@harsh-HP-Notebook:~/storeserver$ cd
+harsh@harsh-HP-Notebook:~$ git clone git@github.com:blogvault/apiserver.git
+Cloning into 'apiserver'...
+remote: Enumerating objects: 87, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 87 (delta 4), reused 10 (delta 3), pack-reused 72
+Receiving objects: 100% (87/87), 18.78 KiB | 103.00 KiB/s, done.
+Resolving deltas: 100% (31/31), done.
+harsh@harsh-HP-Notebook:~$ vim .bashrc
+harsh@harsh-HP-Notebook:~$ cd apiserver/
+harsh@harsh-HP-Notebook:~/apiserver$ ./configure
+Info: Configuring systemd unit file.
+Info: Configuring server log file.
+Info: Configuring server config file.
+Info: Configuring redis config file.
+Info: Configuration is completed.
+harsh@harsh-HP-Notebook:~/apiserver$ make
+mkdir -p /home/harsh/apiserver/bin;
+go build -o /home/harsh/apiserver/bin/bvapi2 /home/harsh/apiserver/src/apiserver.go;
+go: downloading github.com/go-redis/redis v6.15.6+incompatible
+go: extracting github.com/go-redis/redis v6.15.6+incompatible
+go: finding github.com/go-redis/redis v6.15.6+incompatible
+harsh@harsh-HP-Notebook:~/apiserver$ make install
+if [ ! -f "/lib/systemd/system/bvapi2.service" ]; then \
+	cp /home/harsh/apiserver/config/bvapi2.service /lib/systemd/system/bvapi2.service; \
+fi;
+cp: cannot create regular file '/lib/systemd/system/bvapi2.service': Permission denied
+make: *** [Makefile:30: install] Error 1
+harsh@harsh-HP-Notebook:~/apiserver$ sudo make install
+if [ ! -f "/lib/systemd/system/bvapi2.service" ]; then \
+	cp /home/harsh/apiserver/config/bvapi2.service /lib/systemd/system/bvapi2.service; \
+fi;
+if [ ! -f "/etc/systemd/system/multi-user.target.wants/bvapi2.service" ]; then \
+	ln -s /lib/systemd/system/bvapi2.service /etc/systemd/system/multi-user.target.wants/bvapi2.service; \
+fi;
+systemctl daemon-reload;
+harsh@harsh-HP-Notebook:~/apiserver$ service bvapi2 start
+harsh@harsh-HP-Notebook:~/apiserver$ service bvapi2 status
+● bvapi2.service - BlogVault: ApiServer
+     Loaded: loaded (/lib/systemd/system/bvapi2.service; enabled; vendor preset>
+     Active: active (running) since Mon 2021-06-14 19:35:56 IST; 14s ago
+   Main PID: 78991 (bvapi2)
+      Tasks: 6 (limit: 4550)
+     Memory: 1.3M
+     CGroup: /system.slice/bvapi2.service
+             └─78991 /home/harsh/apiserver/bin/bvapi2
+
+Jun 14 19:35:56 harsh-HP-Notebook systemd[1]: Started BlogVault: ApiServer.
+Jun 14 19:35:56 harsh-HP-Notebook BVAPI2[78991]: PONG Redis<localhost:6379 db:2>
+harsh@harsh-HP-Notebook:~/apiserver$ sudo nano /var/www/html
+harsh@harsh-HP-Notebook:~/apiserver$ sudo nano /var/www/html/dragoman.php
+harsh@harsh-HP-Notebook:~/apiserver$ cd /etc/apache2/sites-available/
+harsh@harsh-HP-Notebook:/etc/apache2/sites-available$ ls
+000-default.conf  default-ssl.conf  html.conf  localhost.conf  wordpress.conf
+harsh@harsh-HP-Notebook:/etc/apache2/sites-available$ cd
+harsh@harsh-HP-Notebook:~$ cd blogvault/
+harsh@harsh-HP-Notebook:~/blogvault$ ls
+store
+harsh@harsh-HP-Notebook:~/blogvault$ vim setup_local.rb
+harsh@harsh-HP-Notebook:~/blogvault$ ruby setup_local.rb
+harsh@harsh-HP-Notebook:~/blogvault$ ls
+setup_local.rb  store
+harsh@harsh-HP-Notebook:~/blogvault$ ruby version
+Traceback (most recent call last):
+ruby: No such file or directory -- version (LoadError)
+harsh@harsh-HP-Notebook:~/blogvault$ ruby --version
+ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux-gnu]
+harsh@harsh-HP-Notebook:~/blogvault$ ls -a
+.  ..  setup_local.rb  store
+harsh@harsh-HP-Notebook:~/blogvault$ ls store/
+b1
+harsh@harsh-HP-Notebook:~/blogvault$ ls -a store/
+.  ..  b1
+harsh@harsh-HP-Notebook:~/blogvault$ cd
+harsh@harsh-HP-Notebook:~$ ls /var/www/html/wordpress/wp-config.php
+/var/www/html/wordpress/wp-config.php
+harsh@harsh-HP-Notebook:~$ sudo vim /var/www/html/wordpress/wp-config.php
+[sudo] password for harsh: 
+harsh@harsh-HP-Notebook:~$ ls /var/www/html/wordpress/
+index.php        wp-blog-header.php    wp-cron.php        wp-mail.php
+license.txt      wp-comments-post.php  wp-includes        wp-settings.php
+readme.html      wp-config.php         wp-links-opml.php  wp-signup.php
+wp-activate.php  wp-config-sample.php  wp-load.php        wp-trackback.php
+wp-admin         wp-content            wp-login.php       xmlrpc.php
+harsh@harsh-HP-Notebook:~$ cd /var/www/html/
+harsh@harsh-HP-Notebook:/var/www/html$ sudo vim coposer.json
+harsh@harsh-HP-Notebook:/var/www/html$ sudo vim composer.json
+harsh@harsh-HP-Notebook:/var/www/html$ sudo vim dragoman.php
+harsh@harsh-HP-Notebook:/var/www/html$ cd
+harsh@harsh-HP-Notebook:~$ cd blogvault/
+harsh@harsh-HP-Notebook:~/blogvault$ git clone git@github.com:blogvault/blogvault.git
+Cloning into 'blogvault'...
+remote: Enumerating objects: 307067, done.
+remote: Counting objects: 100% (4592/4592), done.
+remote: Compressing objects: 100% (1357/1357), done.
+remote: Total 307067 (delta 3271), reused 4376 (delta 3162), pack-reused 302475
+Receiving objects: 100% (307067/307067), 112.81 MiB | 6.09 MiB/s, done.
+Resolving deltas: 100% (213273/213273), done.
+Updating files: 100% (4870/4870), done.
+harsh@harsh-HP-Notebook:~/blogvault$ vim setup_local.rb
+harsh@harsh-HP-Notebook:~/blogvault$ ruby setup_local.rb
+harsh@harsh-HP-Notebook:~/blogvault$ cd config
+bash: cd: config: No such file or directory
+harsh@harsh-HP-Notebook:~/blogvault$ cd blogvault/config/
+harsh@harsh-HP-Notebook:~/blogvault/blogvault/config$ cd ../
+harsh@harsh-HP-Notebook:~/blogvault/blogvault$ ruby setup_local.rb
+Traceback (most recent call last):
+ruby: No such file or directory -- setup_local.rb (LoadError)
+harsh@harsh-HP-Notebook:~/blogvault/blogvault$ ruby setup_local.rb
+harsh@harsh-HP-Notebook:~/blogvault/blogvault$ vim config/database.yml
+harsh@harsh-HP-Notebook:~/blogvault/blogvault$ yarn install
+yarn install v1.22.10
+info No lockfile found.
+[1/4] Resolving packages...
+warning @rails/webpacker > extract-text-webpack-plugin@3.0.2: Deprecated. Please use https://github.com/webpack-contrib/mini-css-extract-plugin
+warning @rails/webpacker > postcss-cssnext@3.1.0: 'postcss-cssnext' has been deprecated in favor of 'postcss-preset-env'. Read more at https://moox.io/blog/deprecating-cssnext/
+warning @rails/webpacker > babel-polyfill > core-js@2.6.12: core-js@<3.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+warning @rails/webpacker > babel-core > babel-register > core-js@2.6.12: core-js@<3.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+warning @rails/webpacker > babel-core > babel-runtime > core-js@2.6.12: core-js@<3.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+warning @rails/webpacker > postcss-cssnext > autoprefixer > browserslist@2.11.3: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
+warning @rails/webpacker > css-loader > cssnano > autoprefixer > browserslist@1.7.7: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
+warning @rails/webpacker > postcss-cssnext > caniuse-api > browserslist@2.11.3: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
+warning @rails/webpacker > postcss-cssnext > pixrem > browserslist@2.11.3: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
+warning @rails/webpacker > uglifyjs-webpack-plugin > uglify-es@3.3.9: support for ECMAScript is superseded by `uglify-js` as of v3.13.0
+warning @rails/webpacker > node-sass > request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+warning @rails/webpacker > node-sass > node-gyp > request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+warning @rails/webpacker > css-loader > cssnano > postcss-merge-rules > browserslist@1.7.7: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
+warning @rails/webpacker > css-loader > cssnano > postcss-merge-rules > caniuse-api > browserslist@1.7.7: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
+warning @rails/webpacker > node-sass > request > har-validator@5.1.5: this library is no longer supported
+warning @rails/webpacker > node-sass > request > uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+warning @rails/webpacker > webpack > watchpack > watchpack-chokidar2 > chokidar@2.1.8: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+warning @rails/webpacker > webpack > watchpack > watchpack-chokidar2 > chokidar > fsevents@1.2.13: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+warning @rails/webpacker > webpack > watchpack > watchpack-chokidar2 > chokidar > braces > snapdragon > source-map-resolve > resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+warning @rails/webpacker > webpack > watchpack > watchpack-chokidar2 > chokidar > braces > snapdragon > source-map-resolve > urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+warning axios@0.7.0: Critical security vulnerability fixed in v0.21.1. For more information, see https://github.com/axios/axios/pull/3410
+warning babel-cli > chokidar@1.7.0: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+warning babel-cli > chokidar > fsevents@1.2.13: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+warning babelify > babel-core > core-js@1.2.7: core-js@<3.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+warning babelify > babel-core > minimatch@2.0.10: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+warning create-react-class > fbjs > core-js@1.2.7: core-js@<3.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+warning babel-eslint@8.2.6: babel-eslint is now @babel/eslint-parser. This package will no longer receive updates.
+warning eslint > file-entry-cache > flat-cache > circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+warning webpack-dev-server > chokidar@2.1.8: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+warning webpack-dev-server > sockjs > uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+[2/4] Fetching packages...
+info fsevents@2.3.2: The platform "linux" is incompatible with this module.
+info "fsevents@2.3.2" is an optional dependency and failed compatibility check. Excluding it from installation.
+info fsevents@1.2.13: The platform "linux" is incompatible with this module.
+info "fsevents@1.2.13" is an optional dependency and failed compatibility check. Excluding it from installation.
+[3/4] Linking dependencies...
+warning "@rails/webpacker > postcss-cssnext@3.1.0" has unmet peer dependency "caniuse-lite@^1.0.30000697".
+warning " > formsy-react@0.19.5" has incorrect peer dependency "react@^0.14.0 || ^15.0.0".
+warning " > react-addons-test-utils@15.6.2" has incorrect peer dependency "react-dom@^15.4.2".
+warning " > react-date-range@0.9.4" has incorrect peer dependency "react@^0.14 || ^15.0.0-rc || ^15.0".
+warning " > react-paginate@4.4.4" has incorrect peer dependency "react@^15.0.0".
+warning " > react-router@2.8.1" has incorrect peer dependency "react@^0.14.0 || ^15.0.0".
+warning " > webpack-dev-server@2.11.2" has unmet peer dependency "webpack@^2.2.0 || ^3.0.0".
+warning "webpack-dev-server > webpack-dev-middleware@1.12.2" has unmet peer dependency "webpack@^1.0.0 || ^2.0.0 || ^3.0.0".
+[4/4] Building fresh packages...
+success Saved lockfile.
+Done in 198.97s.
+harsh@harsh-HP-Notebook:~/blogvault/blogvault$ bundle install
+Following files may not be writable, so sudo is needed:
+  /usr/local/bin
+  /var/lib/gems/2.7.0
+  /var/lib/gems/2.7.0/build_info
+  /var/lib/gems/2.7.0/cache
+  /var/lib/gems/2.7.0/doc
+  /var/lib/gems/2.7.0/extensions
+  /var/lib/gems/2.7.0/gems
+  /var/lib/gems/2.7.0/specifications
+Fetching https://github.com/rails/activeresource.git
+Fetching https://github.com/sinatra/sinatra.git
+Fetching gem metadata from http://rubygems.org/........
+Fetching gem metadata from http://rubygems.org/.
+Resolving dependencies..............
+Using rake 13.0.3
+Using concurrent-ruby 1.1.9
+Fetching i18n 0.9.5
+
+
+Your user account isn't allowed to install to the system RubyGems.
+  You can cancel this installation and run:
+
+      bundle install --path vendor/bundle
+
+  to install the gems into ./vendor/bundle/, or you can enter your password
+  and install the bundled gems to RubyGems using sudo.
+
+  Password: 
+
+
+Your user account isn't allowed to install to the system RubyGems.
+  You can cancel this installation and run:
+
+      bundle install --path vendor/bundle
+
+  to install the gems into ./vendor/bundle/, or you can enter your password
+  and install the bundled gems to RubyGems using sudo.
+
+  Password: 
+Installing i18n 0.9.5
+Using minitest 5.14.4
+Fetching thread_safe 0.3.6
+Installing thread_safe 0.3.6
+Fetching tzinfo 1.2.9
+Installing tzinfo 1.2.9
+Fetching activesupport 5.2.2.1
+Installing activesupport 5.2.2.1
+Using builder 3.2.4
+Using erubi 1.10.0
+Fetching mini_portile2 2.1.0
+Installing mini_portile2 2.1.0
+Fetching nokogiri 1.7.0.1
+Installing nokogiri 1.7.0.1 with native extensions
+Using rails-dom-testing 2.0.3
+Using crass 1.0.6
+Using loofah 2.10.0
+Using rails-html-sanitizer 1.3.0
+Fetching actionview 5.2.2.1
+Installing actionview 5.2.2.1
+Using rack 2.2.3
+Using rack-test 1.1.0
+Fetching actionpack 5.2.2.1
+Installing actionpack 5.2.2.1
+Using nio4r 2.5.7
+Using websocket-extensions 0.1.5
+Using websocket-driver 0.7.5
+Fetching actioncable 5.2.2.1
+Installing actioncable 5.2.2.1
+Using globalid 0.4.2
+Fetching activejob 5.2.2.1
+Installing activejob 5.2.2.1
+Fetching mini_mime 1.1.0
+Installing mini_mime 1.1.0
+Using mail 2.7.1
+Fetching actionmailer 5.2.2.1
+Installing actionmailer 5.2.2.1
+Fetching activemodel 5.2.2.1
+Installing activemodel 5.2.2.1
+Fetching arel 9.0.0
+Installing arel 9.0.0
+Fetching activerecord 5.2.2.1
+Installing activerecord 5.2.2.1
+Fetching active_record_shards 4.0.0.beta9
+Installing active_record_shards 4.0.0.beta9
+Fetching active_utils 3.3.17
+Installing active_utils 3.3.17
+Using ruby2_keywords 0.0.4
+Using arbre 1.4.0
+Fetching coffee-script-source 1.12.2
+Installing coffee-script-source 1.12.2
+Fetching execjs 2.6.0
+Installing execjs 2.6.0
+Fetching coffee-script 2.4.1
+Installing coffee-script 2.4.1
+Using method_source 1.0.0
+Using thor 1.1.0
+Fetching railties 5.2.2.1
+Installing railties 5.2.2.1
+Fetching coffee-rails 5.0.0
+Installing coffee-rails 5.0.0
+Fetching formtastic 3.1.5
+Installing formtastic 3.1.5
+Using formtastic_i18n 0.7.0
+Using has_scope 0.8.0
+Fetching responders 2.4.1
+Installing responders 2.4.1
+Fetching inherited_resources 1.9.0
+Installing inherited_resources 1.9.0
+Using jquery-rails 4.4.0
+Using kaminari-core 1.2.1
+Using kaminari-actionview 1.2.1
+Using kaminari-activerecord 1.2.1
+Using kaminari 1.2.1
+Fetching polyamorous 2.3.2
+Installing polyamorous 2.3.2
+Fetching ransack 2.3.2
+Installing ransack 2.3.2
+Using rb-fsevent 0.11.0
+Fetching ffi 1.9.9
+Installing ffi 1.9.9 with native extensions
+Using rb-inotify 0.10.1
+Fetching sass-listen 4.0.0
+Installing sass-listen 4.0.0
+Fetching sass 3.7.4
+Installing sass 3.7.4
+Fetching sprockets 3.7.2
+Installing sprockets 3.7.2
+Fetching activeadmin 1.4.3
+Installing activeadmin 1.4.3
+Fetching activemerchant 1.121.0
+Installing activemerchant 1.121.0
+Fetching activemodel-serializers-xml 1.0.2
+Installing activemodel-serializers-xml 1.0.2
+Fetching activerecord-import 0.27.0
+Installing activerecord-import 0.27.0
+Using activeresource 5.1.1 from https://github.com/rails/activeresource.git (at master@aba74fd)
+Fetching mimemagic 0.3.10
+Installing mimemagic 0.3.10 with native extensions
+Fetching marcel 0.3.3
+Installing marcel 0.3.3
+Fetching activestorage 5.2.2.1
+Installing activestorage 5.2.2.1
+Fetching public_suffix 3.1.1
+Installing public_suffix 3.1.1
+Using addressable 2.7.0
+Fetching aes 0.5.1
+Installing aes 0.5.1
+Using multi_xml 0.6.0
+Fetching httparty 0.14.0
+Installing httparty 0.14.0
+Fetching airtable 0.0.9
+Installing airtable 0.0.9
+Fetching ethon 0.12.0
+Installing ethon 0.12.0
+Fetching typhoeus 1.4.0
+Installing typhoeus 1.4.0
+Fetching amplitude-api 0.1.1
+Installing amplitude-api 0.1.1
+Fetching encryptor 3.0.0
+Installing encryptor 3.0.0
+Fetching attr_encrypted 3.0.3
+Installing attr_encrypted 3.0.3
+Fetching request_store 1.5.0
+Installing request_store 1.5.0
+Fetching ffi-compiler 1.0.1
+Installing ffi-compiler 1.0.1
+Fetching scrypt 3.0.7
+Installing scrypt 3.0.7 with native extensions
+Fetching authlogic 3.8.0
+Installing authlogic 3.8.0
+Fetching bcrypt 3.1.8
+Installing bcrypt 3.1.8 with native extensions
+Fetching bcrypt_pbkdf 1.1.0
+Installing bcrypt_pbkdf 1.1.0 with native extensions
+Fetching debug_inspector 1.1.0
+Installing debug_inspector 1.1.0 with native extensions
+Fetching binding_of_caller 1.0.0
+Installing binding_of_caller 1.0.0
+Fetching redis 3.3.5
+Installing redis 3.3.5
+Fetching bloomfilter-rb 2.1.1
+Installing bloomfilter-rb 2.1.1 with native extensions
+Fetching bootstrap-sass 3.3.1.0
+Installing bootstrap-sass 3.3.1.0
+Fetching bson 4.12.1
+Installing bson 4.12.1 with native extensions
+Using bundler 2.1.4
+Fetching byebug 6.0.0
+Installing byebug 6.0.0 with native extensions
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+    current directory: /tmp/bundler20210614-80941-873x5tbyebug-6.0.0/gems/byebug-6.0.0/ext/byebug
+/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20210614-80941-1njfxbm.rb extconf.rb
+creating Makefile
+
+current directory: /tmp/bundler20210614-80941-873x5tbyebug-6.0.0/gems/byebug-6.0.0/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /tmp/bundler20210614-80941-873x5tbyebug-6.0.0/gems/byebug-6.0.0/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+context.c: In function ‘call_with_debug_inspector’:
+context.c:190:20: error: passing argument 1 of ‘rb_ensure’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  190 |   return rb_ensure(open_debug_inspector, (VALUE) data, close_debug_inspector,
+      |                    ^~~~~~~~~~~~~~~~~~~~
+      |                    |
+      |                    VALUE (*)(struct call_with_inspection_data *) {aka long unsigned int (*)(struct call_with_inspection_data *)}
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./byebug.h:4,
+                 from context.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h:1990:17: note: expected ‘VALUE (*)(VALUE)’ {aka ‘long unsigned int (*)(long unsigned int)’} but argument
+is of type ‘VALUE (*)(struct call_with_inspection_data *)’ {aka ‘long unsigned int (*)(struct call_with_inspection_data *)’}
+ 1990 | VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
+      |                 ^~~~~~~~~~~~~~~
+context.c:190:56: error: passing argument 3 of ‘rb_ensure’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  190 |   return rb_ensure(open_debug_inspector, (VALUE) data, close_debug_inspector,
+      |                                                        ^~~~~~~~~~~~~~~~~~~~~
+      |                                                        |
+|                                                        VALUE (*)(struct call_with_inspection_data *) {aka long unsigned int (*)(struct
+call_with_inspection_data *)}
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./byebug.h:4,
+                 from context.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h:1990:39: note: expected ‘VALUE (*)(VALUE)’ {aka ‘long unsigned int (*)(long unsigned int)’} but argument
+is of type ‘VALUE (*)(struct call_with_inspection_data *)’ {aka ‘long unsigned int (*)(struct call_with_inspection_data *)’}
+ 1990 | VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
+      |                                       ^~~~~~~~~~~~~~~
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:2148,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./byebug.h:4,
+                 from context.c:1:
+context.c: In function ‘Init_context’:
+/usr/include/ruby-2.7.0/ruby/intern.h:1218:137: error: passing argument 3 of ‘rb_define_singleton_method1’ from incompatible pointer type
+[-Werror=incompatible-pointer-types]
+1218 | #define rb_define_singleton_method(klass, mid, func, arity)
+rb_define_singleton_method_choose_prototypem3((arity),(func))((klass),(mid),(func),(arity));
+|                                                                                                                                       
+^~~~~~
+|                                                                                                                                       
+|
+|                                                                                                                                       
+VALUE (*)(VALUE) {aka long unsigned int (*)(long unsigned int)}
+context.c:672:3: note: in expansion of macro ‘rb_define_singleton_method’
+  672 |   rb_define_singleton_method(cDebugThread, "inherited", dt_inherited, 1);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/ruby-2.7.0/ruby/intern.h:1195:27: note: expected ‘VALUE (*)(VALUE,  VALUE)’ {aka ‘long unsigned int (*)(long unsigned int,  long
+unsigned int)’} but argument is of type ‘VALUE (*)(VALUE)’ {aka ‘long unsigned int (*)(long unsigned int)’}
+ 1195 | RB_METHOD_DEFINITION_DECL(rb_define_singleton_method, (2,3), (VALUE klass, const char *name), (klass, name))
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/ruby-2.7.0/ruby/intern.h:1042:82: note: in definition of macro ‘RB_METHOD_DEFINITION_DECL_C’
+1042 |     __attribute__((__unused__,__weakref__(#def),__nonnull__ nonnull))static void defname(RB_UNWRAP_MACRO decl,VALUE(*func)funcargs,int
+arity);
+      |                                                                                  ^~~~~~~
+/usr/include/ruby-2.7.0/ruby/intern.h:1075:1: note: in expansion of macro ‘RB_METHOD_DEFINITION_DECL_1’
+ 1075 | RB_METHOD_DEFINITION_DECL_1(def,nonnull,def##1 ,1 ,decl,vars,(VALUE,VALUE)) \
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/ruby-2.7.0/ruby/intern.h:1195:1: note: in expansion of macro ‘RB_METHOD_DEFINITION_DECL’
+ 1195 | RB_METHOD_DEFINITION_DECL(rb_define_singleton_method, (2,3), (VALUE klass, const char *name), (klass, name))
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+make: *** [Makefile:245: context.o] Error 1
+
+make failed, exit code 2
+
+Gem files will remain installed in /tmp/bundler20210614-80941-873x5tbyebug-6.0.0/gems/byebug-6.0.0 for inspection.
+Results logged to /tmp/bundler20210614-80941-873x5tbyebug-6.0.0/extensions/x86_64-linux/2.7.0/byebug-6.0.0/gem_make.out
+
+An error occurred while installing byebug (6.0.0), and Bundler cannot continue.
+Make sure that `gem install byebug -v '6.0.0' --source 'http://rubygems.org/'` succeeds before bundling.
+
+In Gemfile:
+  byebug
+harsh@harsh-HP-Notebook:~/blogvault/blogvault$ cd
+harsh@harsh-HP-Notebook:~$ git clone git@github.com:blogvault/blogvault.git
+Cloning into 'blogvault'...
+remote: Enumerating objects: 307067, done.
+remote: Counting objects: 100% (4591/4591), done.
+remote: Compressing objects: 100% (1342/1342), done.
+remote: Total 307067 (delta 3271), reused 4394 (delta 3176), pack-reused 302476
+Receiving objects: 100% (307067/307067), 112.84 MiB | 5.57 MiB/s, done.
+Resolving deltas: 100% (213283/213283), done.
+Updating files: 100% (4870/4870), done.
+harsh@harsh-HP-Notebook:~$ cd blogvault/
+harsh@harsh-HP-Notebook:~/blogvault$ vim setup_local.rb
+harsh@harsh-HP-Notebook:~/blogvault$ vim setup_local.rb\
+> 
+harsh@harsh-HP-Notebook:~/blogvault$ require 'fileutils'
+^Charsh@harsh-HP-Notebook:~/blogvault$ ruby setup_local.rb
+harsh@harsh-HP-Notebook:~/blogvault$ cd config/
+harsh@harsh-HP-Notebook:~/blogvault/config$ ls
+admin.yml                        enc_key.yml.sample                       mongo_db_backup_config.yml.sample  secret_enc_key.yml
+admin.yml.sample                 environment.rb                           mongoid.yml                        secret_enc_key.yml.sample
+airtable.conf.yml                environments                             mongoid.yml.sample                 sendgrid_api.yml
+airtable.conf.yml.sample         extra                                    netdata                            sendgrid_api.yml.sample
+amplitude_redis_conf.yml         feature_owners.yml                       newrelic.yml                       sendinblue.conf.yml
+amplitude_redis_conf.yml.sample  feature_owners.yml.sample                newui.yml                          sendinblue.conf.yml.sample
+amplitude.yml                    freshdesk_conf.yml                       newui.yml.sample                   service_conf.yml
+amplitude.yml.sample             freshdesk_conf.yml.sample                node_conf.yml                      service_conf.yml.sample
+application.rb                   fullstory.yml                            node_conf.yml.sample               shards
+asym_pubkey.yml                  fullstory.yml.sample                     otp_encr_key.yml                   share_a_sale.yml
+boot.rb                          fw_shards                                otp_encr_key.yml.sample            share_a_sale.yml.sample
+bv_aes_key.yml                   gatrackingid.yml                         pagerduty_conf.yml                 site_wide_coupon.yml
+bv_aes_key.yml.sample            gatrackingid.yml.sample                  pagerduty_conf.yml.sample          site_wide_coupon.yml.sample
+cable.yml                        gchat_incoming_webhooks_conf.yml         partial_backup_conf.yml            slack.yml
+cdn_host.yml                     gchat_incoming_webhooks_conf.yml.sample  partial_backup_conf.yml.sample     slack.yml.sample
+cdn_host.yml.sample              gcloud_core_backup.yml                   paypal_conf.yml                    smtp_gmail.rb.bk
+clarity.yml                      gcloud_core_backup.yml.sample            paypal_conf.yml.sample             spring.rb
+clarity.yml.sample               gcloud.yml                               pixel.yml                          ssh_keys.yml
+constants                        gcloud.yml.sample                        pixel.yml.sample                   ssh_keys.yml.sample
+control_conf.yml                 getresponse.yml                          postmark_api.yml                   staging_conf.yml
+control_conf.yml.sample          getresponse.yml.sample                   postmark_api.yml.sample            staging_conf.yml.sample
+core_db_config.yml               google_analytics_oauth2.yml              profitwell.yml                     statsd_master_conf.yml
+core_db_config.yml.sample        google_analytics_oauth2.yml.sample       profitwell.yml.sample              statsd_master_conf.yml.sample
+database.yml                     google_oauth2.yml                        puma.rb.sample                     statsd.yml
+database.yml.sample              google_oauth2.yml.sample                 recaptcha_keys.yml                 stripe.yml
+dragoman_conf.yml                google_pagespeed_api.yml                 recaptcha_keys.yml.sample          stripe.yml.sample
+dragoman_conf.yml.sample         google_pagespeed_api.yml.sample          redis_conf.yml                     supporthero.yml
+drift_conf.yml                   google_recaptcha.yml                     redis_conf.yml.sample              supporthero.yml.sample
+drift_conf.yml.sample            google_recaptcha.yml.sample              reports_auth.yml                   tapfiliate.yml
+dropbox_conf.yml                 hubspot.conf.yml                         reports_auth.yml.sample            tapfiliate.yml.sample
+dropbox_conf.yml.sample          hubspot.conf.yml.sample                  routes                             testrestore_conf.yml
+elastic_apm.yml                  initializers                             routes_conf.yml                    watch_conf.yml
+elastic_apm.yml.sample           locales                                  routes_conf.yml.sample             watch_conf.yml.sample
+emails.yml                       log_stash.yml                            routes.rb                          webpack
+emails.yml.sample                log_stash.yml.sample                     safe_browse_api.yml                web_server_conf.yml
+enc_key.yml                      mongo_db_backup_config.yml               safe_browse_api.yml.sample         web_server_conf.yml.sample
+harsh@harsh-HP-Notebook:~/blogvault/config$ cd ..
+harsh@harsh-HP-Notebook:~/blogvault$ mysql
+ERROR 1045 (28000): Access denied for user 'harsh'@'localhost' (using password: NO)
+harsh@harsh-HP-Notebook:~/blogvault$ sudo mysql -u root
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+harsh@harsh-HP-Notebook:~/blogvault$ mysql -u root -p 
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 348
+Server version: 8.0.25-0ubuntu0.20.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> Create user 'bv-harsh'@'localhost' identified by 'password'
+    -> ;
+Query OK, 0 rows affected (3.36 sec)
+
+mysql> grant all privileges on *.* to 'bv-harsh@localhost';
+ERROR 1410 (42000): You are not allowed to create a user with GRANT
+mysql> grant all privileges on *.* to 'bv-harsh'@'localhost';
+Query OK, 0 rows affected (0.96 sec)
+
+mysql> exit;
+exit;
+^C
+mysql> EXIT;
+Bye
+harsh@harsh-HP-Notebook:~/blogvault$ vim config/database.yml
+harsh@harsh-HP-Notebook:~/blogvault$ ruby --version
+ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux-gnu]
+harsh@harsh-HP-Notebook:~/blogvault$ rvm --default use 2.3.3
+
+RVM is not a function, selecting rubies with 'rvm use ...' will not work.
+
+You need to change your terminal emulator preferences to allow login shell.
+Sometimes it is required to use `/bin/bash --login` as the command.
+Please visit https://rvm.io/integration/gnome-terminal/ for an example.
+
+harsh@harsh-HP-Notebook:~/blogvault$ ruby --version
+ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux-gnu]
+harsh@harsh-HP-Notebook:~/blogvault$ rvm --default use 2.3.3
+
+RVM is not a function, selecting rubies with 'rvm use ...' will not work.
+
+You need to change your terminal emulator preferences to allow login shell.
+Sometimes it is required to use `/bin/bash --login` as the command.
+Please visit https://rvm.io/integration/gnome-terminal/ for an example.
+
+harsh@harsh-HP-Notebook:~/blogvault$ cd
+harsh@harsh-HP-Notebook:~$ vi .bashrc
+harsh@harsh-HP-Notebook:~$ 
+
+
+
+
+
+
+
+
+
+
+harsh@harsh-HP-Notebook:~/Desktop$ cd
+harsh@harsh-HP-Notebook:~$ rvm --default use 2.3.3
+Using /home/harsh/.rvm/gems/ruby-2.3.3
+harsh@harsh-HP-Notebook:~$ cd blogvault/
+harsh@harsh-HP-Notebook:~/blogvault$ yarn install
+yarn install v1.22.10
+info No lockfile found.
+[1/4] Resolving packages...
+warning @rails/webpacker > extract-text-webpack-plugin@3.0.2: Deprecated. Please use https://github.com/webpack-contrib/mini-css-extract-plugin
+warning @rails/webpacker > postcss-cssnext@3.1.0: 'postcss-cssnext' has been deprecated in favor of 'postcss-preset-env'. Read more at https://moox.io/blog/deprecating-cssnext/
+warning @rails/webpacker > babel-polyfill > core-js@2.6.12: core-js@<3.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+warning @rails/webpacker > babel-plugin-transform-object-rest-spread > babel-runtime > core-js@2.6.12: core-js@<3.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+warning @rails/webpacker > babel-core > babel-register > core-js@2.6.12: core-js@<3.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+warning @rails/webpacker > postcss-cssnext > caniuse-api > browserslist@2.11.3: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
+warning @rails/webpacker > postcss-cssnext > pixrem > browserslist@2.11.3: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
+warning @rails/webpacker > postcss-cssnext > autoprefixer > browserslist@2.11.3: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
+warning @rails/webpacker > css-loader > cssnano > autoprefixer > browserslist@1.7.7: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
+warning @rails/webpacker > node-sass > request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+warning @rails/webpacker > node-sass > node-gyp > request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+warning @rails/webpacker > uglifyjs-webpack-plugin > uglify-es@3.3.9: support for ECMAScript is superseded by `uglify-js` as of v3.13.0
+warning @rails/webpacker > css-loader > cssnano > postcss-merge-rules > browserslist@1.7.7: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
+warning @rails/webpacker > css-loader > cssnano > postcss-merge-rules > caniuse-api > browserslist@1.7.7: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
+warning @rails/webpacker > node-sass > request > har-validator@5.1.5: this library is no longer supported
+warning @rails/webpacker > node-sass > request > uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+warning @rails/webpacker > webpack > watchpack > watchpack-chokidar2 > chokidar@2.1.8: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+warning @rails/webpacker > webpack > watchpack > watchpack-chokidar2 > chokidar > fsevents@1.2.13: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+warning @rails/webpacker > webpack > watchpack > watchpack-chokidar2 > chokidar > braces > snapdragon > source-map-resolve > resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+warning @rails/webpacker > webpack > watchpack > watchpack-chokidar2 > chokidar > braces > snapdragon > source-map-resolve > urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+warning axios@0.7.0: Critical security vulnerability fixed in v0.21.1. For more information, see https://github.com/axios/axios/pull/3410
+warning babel-cli > chokidar@1.7.0: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+warning babel-cli > chokidar > fsevents@1.2.13: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+warning babelify > babel-core > core-js@1.2.7: core-js@<3.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+warning babelify > babel-core > minimatch@2.0.10: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+warning create-react-class > fbjs > core-js@1.2.7: core-js@<3.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+warning babel-eslint@8.2.6: babel-eslint is now @babel/eslint-parser. This package will no longer receive updates.
+warning eslint > file-entry-cache > flat-cache > circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+warning webpack-dev-server > chokidar@2.1.8: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+warning webpack-dev-server > sockjs > uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+[2/4] Fetching packages...
+info fsevents@2.3.2: The platform "linux" is incompatible with this module.
+info "fsevents@2.3.2" is an optional dependency and failed compatibility check. Excluding it from installation.
+info fsevents@1.2.13: The platform "linux" is incompatible with this module.
+info "fsevents@1.2.13" is an optional dependency and failed compatibility check. Excluding it from installation.
+[3/4] Linking dependencies...
+warning "@rails/webpacker > postcss-cssnext@3.1.0" has unmet peer dependency "caniuse-lite@^1.0.30000697".
+warning " > formsy-react@0.19.5" has incorrect peer dependency "react@^0.14.0 || ^15.0.0".
+warning " > react-addons-test-utils@15.6.2" has incorrect peer dependency "react-dom@^15.4.2".
+warning " > react-date-range@0.9.4" has incorrect peer dependency "react@^0.14 || ^15.0.0-rc || ^15.0".
+warning " > react-paginate@4.4.4" has incorrect peer dependency "react@^15.0.0".
+warning " > react-router@2.8.1" has incorrect peer dependency "react@^0.14.0 || ^15.0.0".
+warning " > webpack-dev-server@2.11.2" has unmet peer dependency "webpack@^2.2.0 || ^3.0.0".
+warning "webpack-dev-server > webpack-dev-middleware@1.12.2" has unmet peer dependency "webpack@^1.0.0 || ^2.0.0 || ^3.0.0".
+[#####################################-------------------------------------------------------------------------------------------------] 9454/[4/4] Building fresh packages...
+success Saved lockfile.
+Done in 295.51s.
+harsh@harsh-HP-Notebook:~/blogvault$ bundle install
+Fetching https://github.com/rails/activeresource.git
+Fetching https://github.com/sinatra/sinatra.git
+Fetching gem metadata from http://rubygems.org/........
+Fetching gem metadata from http://rubygems.org/.
+Resolving dependencies.............
+Fetching rake 13.0.3
+Installing rake 13.0.3
+Fetching concurrent-ruby 1.1.9
+Installing concurrent-ruby 1.1.9
+Fetching i18n 0.9.5
+Installing i18n 0.9.5
+Fetching minitest 5.14.4
+Installing minitest 5.14.4
+Fetching thread_safe 0.3.6
+Installing thread_safe 0.3.6
+Fetching tzinfo 1.2.9
+Installing tzinfo 1.2.9
+Fetching activesupport 5.2.2.1
+Installing activesupport 5.2.2.1
+Fetching builder 3.2.4
+Installing builder 3.2.4
+Fetching erubi 1.10.0
+Installing erubi 1.10.0
+Fetching mini_portile2 2.1.0
+Installing mini_portile2 2.1.0
+Fetching nokogiri 1.7.0.1
+Installing nokogiri 1.7.0.1 with native extensions
+Fetching rails-dom-testing 2.0.3
+Installing rails-dom-testing 2.0.3
+Fetching crass 1.0.6
+Installing crass 1.0.6
+Fetching loofah 2.10.0
+Installing loofah 2.10.0
+Fetching rails-html-sanitizer 1.3.0
+Installing rails-html-sanitizer 1.3.0
+Fetching actionview 5.2.2.1
+Installing actionview 5.2.2.1
+Fetching rack 2.2.3
+Installing rack 2.2.3
+Fetching rack-test 1.1.0
+Installing rack-test 1.1.0
+Fetching actionpack 5.2.2.1
+Installing actionpack 5.2.2.1
+Fetching nio4r 2.5.7
+Installing nio4r 2.5.7 with native extensions
+Fetching websocket-extensions 0.1.5
+Installing websocket-extensions 0.1.5
+Fetching websocket-driver 0.7.5
+Installing websocket-driver 0.7.5 with native extensions
+Fetching actioncable 5.2.2.1
+Installing actioncable 5.2.2.1
+Fetching globalid 0.4.2
+Installing globalid 0.4.2
+Fetching activejob 5.2.2.1
+Installing activejob 5.2.2.1
+Fetching mini_mime 1.1.0
+Installing mini_mime 1.1.0
+Fetching mail 2.7.1
+Installing mail 2.7.1
+Fetching actionmailer 5.2.2.1
+Installing actionmailer 5.2.2.1
+Fetching activemodel 5.2.2.1
+Installing activemodel 5.2.2.1
+Fetching arel 9.0.0
+Installing arel 9.0.0
+Fetching activerecord 5.2.2.1
+Installing activerecord 5.2.2.1
+Fetching active_record_shards 4.0.0.beta9
+Installing active_record_shards 4.0.0.beta9
+Fetching active_utils 3.3.17
+Installing active_utils 3.3.17
+Fetching ruby2_keywords 0.0.4
+Installing ruby2_keywords 0.0.4
+Fetching arbre 1.4.0
+Installing arbre 1.4.0
+Fetching coffee-script-source 1.12.2
+Installing coffee-script-source 1.12.2
+Fetching execjs 2.6.0
+Installing execjs 2.6.0
+Fetching coffee-script 2.4.1
+Installing coffee-script 2.4.1
+Fetching method_source 1.0.0
+Installing method_source 1.0.0
+Fetching thor 1.1.0
+Installing thor 1.1.0
+Fetching railties 5.2.2.1
+Installing railties 5.2.2.1
+Fetching coffee-rails 5.0.0
+Installing coffee-rails 5.0.0
+Fetching formtastic 3.1.5
+Installing formtastic 3.1.5
+Fetching formtastic_i18n 0.7.0
+Installing formtastic_i18n 0.7.0
+Fetching has_scope 0.8.0
+Installing has_scope 0.8.0
+Fetching responders 2.4.1
+Installing responders 2.4.1
+Fetching inherited_resources 1.9.0
+Installing inherited_resources 1.9.0
+Fetching jquery-rails 4.4.0
+Installing jquery-rails 4.4.0
+Fetching kaminari-core 1.2.1
+Installing kaminari-core 1.2.1
+Fetching kaminari-actionview 1.2.1
+Installing kaminari-actionview 1.2.1
+Fetching kaminari-activerecord 1.2.1
+Installing kaminari-activerecord 1.2.1
+Fetching kaminari 1.2.1
+Installing kaminari 1.2.1
+Fetching polyamorous 2.3.2
+Installing polyamorous 2.3.2
+Fetching ransack 2.3.2
+Installing ransack 2.3.2
+Fetching rb-fsevent 0.11.0
+Installing rb-fsevent 0.11.0
+Fetching ffi 1.9.9
+Installing ffi 1.9.9 with native extensions
+Fetching rb-inotify 0.10.1
+Installing rb-inotify 0.10.1
+Fetching sass-listen 4.0.0
+Installing sass-listen 4.0.0
+Fetching sass 3.7.4
+Installing sass 3.7.4
+Fetching sprockets 3.7.2
+Installing sprockets 3.7.2
+Fetching activeadmin 1.4.3
+Installing activeadmin 1.4.3
+Fetching activemerchant 1.121.0
+Installing activemerchant 1.121.0
+Fetching activemodel-serializers-xml 1.0.2
+Installing activemodel-serializers-xml 1.0.2
+Fetching activerecord-import 0.27.0
+Installing activerecord-import 0.27.0
+Using activeresource 5.1.1 from https://github.com/rails/activeresource.git (at master@aba74fd)
+Fetching mimemagic 0.3.10
+Installing mimemagic 0.3.10 with native extensions
+Fetching marcel 0.3.3
+Installing marcel 0.3.3
+Fetching activestorage 5.2.2.1
+Installing activestorage 5.2.2.1
+Fetching public_suffix 3.1.1
+Installing public_suffix 3.1.1
+Fetching addressable 2.7.0
+Installing addressable 2.7.0
+Fetching aes 0.5.1
+Installing aes 0.5.1
+Fetching multi_xml 0.6.0
+Installing multi_xml 0.6.0
+Fetching httparty 0.14.0
+Installing httparty 0.14.0
+Fetching airtable 0.0.9
+Installing airtable 0.0.9
+Fetching ethon 0.12.0
+Installing ethon 0.12.0
+Fetching typhoeus 1.4.0
+Installing typhoeus 1.4.0
+Fetching amplitude-api 0.1.1
+Installing amplitude-api 0.1.1
+Fetching encryptor 3.0.0
+Installing encryptor 3.0.0
+Fetching attr_encrypted 3.0.3
+Installing attr_encrypted 3.0.3
+Fetching request_store 1.5.0
+Installing request_store 1.5.0
+Fetching ffi-compiler 1.0.1
+Installing ffi-compiler 1.0.1
+Fetching scrypt 3.0.7
+Installing scrypt 3.0.7 with native extensions
+Fetching authlogic 3.8.0
+Installing authlogic 3.8.0
+Fetching bcrypt 3.1.8
+Installing bcrypt 3.1.8 with native extensions
+Fetching bcrypt_pbkdf 1.1.0
+Installing bcrypt_pbkdf 1.1.0 with native extensions
+Fetching debug_inspector 1.1.0
+Installing debug_inspector 1.1.0 with native extensions
+Fetching binding_of_caller 1.0.0
+Installing binding_of_caller 1.0.0
+Fetching redis 3.3.5
+Installing redis 3.3.5
+Fetching bloomfilter-rb 2.1.1
+Installing bloomfilter-rb 2.1.1 with native extensions
+Fetching bootstrap-sass 3.3.1.0
+Installing bootstrap-sass 3.3.1.0
+Fetching bson 4.12.1
+Installing bson 4.12.1 with native extensions
+Using bundler 2.1.2
+Fetching byebug 6.0.0
+Installing byebug 6.0.0 with native extensions
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+current directory:
+/home/harsh/.rvm/gems/ruby-2.3.3/gems/byebug-6.0.0/ext/byebug
+/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20210614-96137-nbwaum.rb
+extconf.rb
+creating Makefile
+
+current directory:
+/home/harsh/.rvm/gems/ruby-2.3.3/gems/byebug-6.0.0/ext/byebug
+make "DESTDIR=" clean
+
+current directory:
+/home/harsh/.rvm/gems/ruby-2.3.3/gems/byebug-6.0.0/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+context.c: In function ‘call_with_debug_inspector’:
+context.c:190:20: error: passing argument 1 of ‘rb_ensure’ from incompatible
+pointer type [-Werror=incompatible-pointer-types]
+190 |   return rb_ensure(open_debug_inspector, (VALUE) data,
+close_debug_inspector,
+      |                    ^~~~~~~~~~~~~~~~~~~~
+      |                    |
+|                    VALUE (*)(struct call_with_inspection_data *) {aka
+long unsigned int (*)(struct call_with_inspection_data *)}
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./byebug.h:4,
+                 from context.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h:1990:17: note: expected ‘VALUE (*)(VALUE)’
+{aka ‘long unsigned int (*)(long unsigned int)’} but argument is of type ‘VALUE
+(*)(struct call_with_inspection_data *)’ {aka ‘long unsigned int (*)(struct
+call_with_inspection_data *)’}
+ 1990 | VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
+      |                 ^~~~~~~~~~~~~~~
+context.c:190:56: error: passing argument 3 of ‘rb_ensure’ from incompatible
+pointer type [-Werror=incompatible-pointer-types]
+190 |   return rb_ensure(open_debug_inspector, (VALUE) data,
+close_debug_inspector,
+|                                                       
+^~~~~~~~~~~~~~~~~~~~~
+      |                                                        |
+|                                                        VALUE (*)(struct
+call_with_inspection_data *) {aka long unsigned int (*)(struct
+call_with_inspection_data *)}
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./byebug.h:4,
+                 from context.c:1:
+/usr/include/ruby-2.7.0/ruby/ruby.h:1990:39: note: expected ‘VALUE (*)(VALUE)’
+{aka ‘long unsigned int (*)(long unsigned int)’} but argument is of type ‘VALUE
+(*)(struct call_with_inspection_data *)’ {aka ‘long unsigned int (*)(struct
+call_with_inspection_data *)’}
+ 1990 | VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
+      |                                       ^~~~~~~~~~~~~~~
+In file included from /usr/include/ruby-2.7.0/ruby/ruby.h:2148,
+                 from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from ./byebug.h:4,
+                 from context.c:1:
+context.c: In function ‘Init_context’:
+/usr/include/ruby-2.7.0/ruby/intern.h:1218:137: error: passing argument 3 of
+‘rb_define_singleton_method1’ from incompatible pointer type
+[-Werror=incompatible-pointer-types]
+1218 | #define rb_define_singleton_method(klass, mid, func, arity)
+rb_define_singleton_method_choose_prototypem3((arity),(func))((klass),(mid),(func),(arity));
+|                                                                        
+^~~~~~
+|                                                                        
+|
+|                                                                        
+VALUE (*)(VALUE) {aka long unsigned int (*)(long unsigned int)}
+context.c:672:3: note: in expansion of macro ‘rb_define_singleton_method’
+672 |   rb_define_singleton_method(cDebugThread, "inherited", dt_inherited,
+1);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/ruby-2.7.0/ruby/intern.h:1195:27: note: expected ‘VALUE (*)(VALUE,
+VALUE)’ {aka ‘long unsigned int (*)(long unsigned int,  long unsigned int)’}
+but argument is of type ‘VALUE (*)(VALUE)’ {aka ‘long unsigned int (*)(long
+unsigned int)’}
+1195 | RB_METHOD_DEFINITION_DECL(rb_define_singleton_method, (2,3), (VALUE
+klass, const char *name), (klass, name))
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/ruby-2.7.0/ruby/intern.h:1042:82: note: in definition of macro
+‘RB_METHOD_DEFINITION_DECL_C’
+1042 |     __attribute__((__unused__,__weakref__(#def),__nonnull__
+nonnull))static void defname(RB_UNWRAP_MACRO decl,VALUE(*func)funcargs,int
+arity);
+|                                                                        
+^~~~~~~
+/usr/include/ruby-2.7.0/ruby/intern.h:1075:1: note: in expansion of macro
+‘RB_METHOD_DEFINITION_DECL_1’
+1075 | RB_METHOD_DEFINITION_DECL_1(def,nonnull,def##1 ,1
+,decl,vars,(VALUE,VALUE)) \
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/ruby-2.7.0/ruby/intern.h:1195:1: note: in expansion of macro
+‘RB_METHOD_DEFINITION_DECL’
+1195 | RB_METHOD_DEFINITION_DECL(rb_define_singleton_method, (2,3), (VALUE
+klass, const char *name), (klass, name))
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+make: *** [Makefile:245: context.o] Error 1
+
+make failed, exit code 2
+
+Gem files will remain installed in
+/home/harsh/.rvm/gems/ruby-2.3.3/gems/byebug-6.0.0 for inspection.
+Results logged to
+/home/harsh/.rvm/gems/ruby-2.3.3/extensions/x86_64-linux/2.7.0/byebug-6.0.0/gem_make.out
+
+An error occurred while installing byebug (6.0.0), and Bundler cannot
+continue.
+Make sure that `gem install byebug -v '6.0.0' --source 'http://rubygems.org/'`
+succeeds before bundling.
+
+In Gemfile:
+  byebug
+harsh@harsh-HP-Notebook:~/blogvault$ vi Gemfile
+harsh@harsh-HP-Notebook:~/blogvault$ bundle install
+
+[!] There was an error parsing `Gemfile`: You cannot specify the same gem twice with different version requirements.
+You specified: byebug (~> 6.0.0) and byebug (= 6.0.0). Bundler cannot continue.
+
+ #  from /home/harsh/blogvault/Gemfile:66
+ #  -------------------------------------------
+ #  gem 'bcrypt', '3.1.8'
+ >  gem 'byebug', '6.0.0'
+ #  gem 'slugify'
+ #  -------------------------------------------
+harsh@harsh-HP-Notebook:~/blogvault$ vi Gemfile
+harsh@harsh-HP-Notebook:~/blogvault$ gem install byebug -v '6.0.0'
+Ignoring bcrypt-3.1.8 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.8
+Ignoring bcrypt_pbkdf-1.1.0 because its extensions are not built. Try: gem pristine bcrypt_pbkdf --version 1.1.0
+Ignoring bloomfilter-rb-2.1.1 because its extensions are not built. Try: gem pristine bloomfilter-rb --version 2.1.1
+Ignoring bson-4.12.1 because its extensions are not built. Try: gem pristine bson --version 4.12.1
+Ignoring debug_inspector-1.1.0 because its extensions are not built. Try: gem pristine debug_inspector --version 1.1.0
+Ignoring bcrypt-3.1.8 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.8
+Ignoring bcrypt_pbkdf-1.1.0 because its extensions are not built. Try: gem pristine bcrypt_pbkdf --version 1.1.0
+Ignoring bloomfilter-rb-2.1.1 because its extensions are not built. Try: gem pristine bloomfilter-rb --version 2.1.1
+Ignoring bson-4.12.1 because its extensions are not built. Try: gem pristine bson --version 4.12.1
+Ignoring debug_inspector-1.1.0 because its extensions are not built. Try: gem pristine debug_inspector --version 1.1.0
+Ignoring ffi-1.9.9 because its extensions are not built. Try: gem pristine ffi --version 1.9.9
+Ignoring mimemagic-0.3.10 because its extensions are not built. Try: gem pristine mimemagic --version 0.3.10
+Ignoring nio4r-2.5.7 because its extensions are not built. Try: gem pristine nio4r --version 2.5.7
+Ignoring nokogiri-1.7.0.1 because its extensions are not built. Try: gem pristine nokogiri --version 1.7.0.1
+Ignoring scrypt-3.0.7 because its extensions are not built. Try: gem pristine scrypt --version 3.0.7
+Ignoring websocket-driver-0.7.5 because its extensions are not built. Try: gem pristine websocket-driver --version 0.7.5
+ERROR:  Loading command: install (LoadError)
+	cannot load such file -- 
+ERROR:  While executing gem ... (NoMethodError)
+    undefined method `invoke_with_build_args' for nil:NilClass
+harsh@harsh-HP-Notebook:~/blogvault$ ruby -ropenssl -e "puts :OK"
+Ignoring bcrypt-3.1.8 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.8
+Ignoring bcrypt_pbkdf-1.1.0 because its extensions are not built. Try: gem pristine bcrypt_pbkdf --version 1.1.0
+Ignoring bloomfilter-rb-2.1.1 because its extensions are not built. Try: gem pristine bloomfilter-rb --version 2.1.1
+Ignoring bson-4.12.1 because its extensions are not built. Try: gem pristine bson --version 4.12.1
+Ignoring debug_inspector-1.1.0 because its extensions are not built. Try: gem pristine debug_inspector --version 1.1.0
+Ignoring ffi-1.9.9 because its extensions are not built. Try: gem pristine ffi --version 1.9.9
+Ignoring mimemagic-0.3.10 because its extensions are not built. Try: gem pristine mimemagic --version 0.3.10
+Ignoring nio4r-2.5.7 because its extensions are not built. Try: gem pristine nio4r --version 2.5.7
+Ignoring nokogiri-1.7.0.1 because its extensions are not built. Try: gem pristine nokogiri --version 1.7.0.1
+Ignoring scrypt-3.0.7 because its extensions are not built. Try: gem pristine scrypt --version 3.0.7
+Ignoring websocket-driver-0.7.5 because its extensions are not built. Try: gem pristine websocket-driver --version 0.7.5
+/home/harsh/.rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:54:in `require': cannot load such file -- openssl (LoadError)
+	from /home/harsh/.rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+harsh@harsh-HP-Notebook:~/blogvault$ rvm pkg install openssl
+
+Beware, 'rvm pkg ...' is deprecated, read about the new autolibs feature: 'rvm help autolibs'.
+
+Checking requirements for rvm_pkg.
+
+Warning, you are using 'rvm autolibs rvm_pkg', this is rarely used and can produce errors,
+make sure to report any problems to https://github.com/rvm/rvm/issues
+
+Requirements installation successful.
+Fetching openssl-1.0.1i.tar.gz to /home/harsh/.rvm/archives
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 4318k  100 4318k    0     0  3454k      0  0:00:01  0:00:01 --:--:-- 3454k
+Extracting openssl to /home/harsh/.rvm/src/openssl-1.0.1i.....
+Configuring openssl in /home/harsh/.rvm/src/openssl-1.0.1i...................................
+Compiling openssl in /home/harsh/.rvm/src/openssl-1.0.1i.....................................................................................-
+Installing openssl to /home/harsh/.rvm/usr...................................................................................................|
+
+Please note that it's required to reinstall all rubies:
+
+    rvm reinstall all --force
+
+Updating openssl certificates....
+harsh@harsh-HP-Notebook:~/blogvault$ rvm reinstall 2.3.3 --with-openssl-dir=$HOME/.rvm/usr
+ruby-2.3.3 - #removing src/ruby-2.3.3..
+ruby-2.3.3 - #removing rubies/ruby-2.3.3..
+Checking requirements for rvm_pkg.
+
+Warning, you are using 'rvm autolibs rvm_pkg', this is rarely used and can produce errors,
+make sure to report any problems to https://github.com/rvm/rvm/issues
+
+Installing requirements for rvm_pkg.
+Always update your system first!
+Updating system.
+Before continuing install: libtool
+Installing required custom packages: libtool...
+Requirements installation successful.
+Installing Ruby from source to: /home/harsh/.rvm/rubies/ruby-2.3.3, this may take a while depending on your cpu(s)...
+ruby-2.3.3 - #downloading ruby-2.3.3, this may take a while depending on your connection...
+ruby-2.3.3 - #extracting ruby-2.3.3 to /home/harsh/.rvm/src/ruby-2.3.3...-
+..
+ruby-2.3.3 - #applying patch /home/harsh/.rvm/patches/ruby/ruby_2_3_gcc7.patch.
+ruby-2.3.3 - #applying patch /home/harsh/.rvm/patches/ruby/2.3.3/random_c_using_NR_prefix.patch.
+ruby-2.3.3 - #configuring..........................................................
+ruby-2.3.3 - #post-configuration..
+ruby-2.3.3 - #compiling.....................................................................................................................^[[..........................................................................................................................................
+ruby-2.3.3 - #installing..............
+ruby-2.3.3 - #making binaries executable..
+ruby-2.3.3 - #downloading rubygems-3.0.9
+ruby-2.3.3 - #extracting rubygems-3.0.9......
+ruby-2.3.3 - #removing old rubygems.........
+ruby-2.3.3 - #installing rubygems-3.0.9................................................................
+ruby-2.3.3 - #gemset created /home/harsh/.rvm/gems/ruby-2.3.3@global
+ruby-2.3.3 - #importing gemset /home/harsh/.rvm/gemsets/global.gems................................................................
+ruby-2.3.3 - #generating global wrappers........
+ruby-2.3.3 - #gemset created /home/harsh/.rvm/gems/ruby-2.3.3
+ruby-2.3.3 - #importing gemsetfile /home/harsh/.rvm/gemsets/default.gems evaluated to empty gem list
+ruby-2.3.3 - #generating default wrappers..........
+ruby-2.3.3 - #adjusting #shebangs for (gem irb erb ri rdoc testrb rake).
+Install of ruby-2.3.3 - #complete 
+Please be aware that you just installed a ruby that requires 2 patches just to be compiled on an up to date linux system.
+This may have known and unaccounted for security vulnerabilities.
+Please consider upgrading to ruby-3.0.0 which will have all of the latest security patches.
+Ruby was built without documentation, to build it run: rvm docs generate-ri
+Making gemset ruby-2.3.3 pristine..................................................................................
+Making gemset ruby-2.3.3@global pristine............................................................................
+harsh@harsh-HP-Notebook:~/blogvault$ 
+harsh@harsh-HP-Notebook:~/blogvault$ bundle install
+The git source `git://github.com/rails/activeresource.git` uses the `git` protocol, which transmits data without encryption. Disable this warning with `bundle config git.allow_insecure true`, or switch to the `https` protocol to keep your data secure.
+The git source `git://github.com/sinatra/sinatra.git` uses the `git` protocol, which transmits data without encryption. Disable this warning with `bundle config git.allow_insecure true`, or switch to the `https` protocol to keep your data secure.
+Fetching git://github.com/rails/activeresource.git
+Fetching git://github.com/sinatra/sinatra.git
+Fetching gem metadata from http://rubygems.org/........
+Fetching gem metadata from http://rubygems.org/.
+Resolving dependencies.................
+nio4r-2.5.7 requires ruby version >= 2.4, which is incompatible with the current version, ruby 2.3.3p222
+harsh@harsh-HP-Notebook:~/blogvault$ 
+
+
+
+
+
+
+
+
+
+
+
